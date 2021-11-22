@@ -2,3 +2,75 @@
 @import "colors.css";
 @import "header.css";
 @import "footer.css";
+
+.main {
+  width: 100%;
+}
+
+.main__container {
+  width: 100%;
+  height: max-content;
+}
+
+.main__text-primary {
+  background-image: url("../img/rivendell.jpg");
+  background-position: 20%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.main__text-primary {
+  padding: 0 25%;
+}
+
+.main__text-secondary {
+  min-height: 24vh;
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  padding: 20px 50px;
+  display: flex;
+}
+
+.main__text-secondary > p {
+  max-width: 50%;
+}
+
+.main__buttons {
+  margin-left: 20px;
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main__buttons > a {
+  text-decoration: none;
+  margin: 0 20px;
+  height: 48px;
+  width: 33%;
+  max-width: 169px;
+
+  filter: drop-shadow(0px 4px 0px #1b445f);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

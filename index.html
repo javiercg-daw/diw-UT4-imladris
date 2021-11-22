@@ -26,25 +26,32 @@
       <div class="header__decoration-line bg-blue-dark"></div>
     </header>
 
-    <main>
-      <section>
-        <p>
-          Risus eget sit risus consectetur. Pharetra pellentesque vivamus enim
-          vulputate ut.
-        </p>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus libero
-          amet eu turpis eu cras. Hac accumsan ridiculus lectus ullamcorper
-          urna, tincidunt adipiscing. Odio sed mauris ac neque elementum id
-          rutrum sed. Egestas egestas sagittis, arcu lacus laoreet egestas non.
-        </p>
-        <div>
-          <a href="./login.html">Log in</a>
-          <a href="./register.html">Sign up</a>
-        </div>
-      </section>
+    <main class="main bg-green-light">
+      <div class="main__container">
+        <section class="main__text-primary text-green-light">
+          <p>
+            Risus eget sit risus consectetur. Pharetra pellentesque vivamus enim
+            vulputate ut.
+          </p>
+        </section>
+        <section class="main__text-secondary bg-green-medium">
+          <p class="text-green-dark">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus
+            libero amet eu turpis eu cras. Hac accumsan ridiculus lectus
+            ullamcorper urna, tincidunt adipiscing. Odio sed mauris ac neque
+            elementum id rutrum sed. Egestas egestas sagittis, arcu lacus
+            laoreet egestas non.
+          </p>
+          <div class="main__buttons">
+            <a class="main__button-login bg-green-dark text-green-light" href="./login.html"
+              >Log in</a
+            >
+            <a class="main__button-register bg-green-dark text-green-light" href="./register.html"
+              >Sign up</a
+            >
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="bg-blue-dark">
@@ -52,7 +59,9 @@
         <p class="footer__brand text-blue-light">Imladris</p>
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li><a class="text-blue-light" href="./contact-us.html">Contact Us</a></li>
+            <li>
+              <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
+            </li>
             <li><a class="text-blue-light" href="">Legal Notice</a></li>
             <li><a class="text-blue-light" href="">Privacy Policy</a></li>
             <li><a class="text-blue-light" href="">Cookies</a></li>

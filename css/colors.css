@@ -1,0 +1,72 @@
+
+.bg-green-dark {
+    background-color: #1B5F34;
+}
+
+.bg-green-medium {
+    background-color: #B0D2BF;
+}
+
+.bg-green-light {
+    background-color: #C7F9CC;
+}
+
+.bg-blue-dark {
+    background-color: #1B445F;
+}
+
+.bg-blue-medium {
+    background-color: #4D7A96;
+}
+
+.bg-blue-light {
+    background-color: #C4E9E7;
+}
+
+.bg-gold {
+    background-color: #DECD31;
+}
+
+.bg-white {
+    background-color: #F7F7F7;
+}
+
+.bg-black {
+    background-color: #141414;
+}
+
+.text-green-dark {
+    color: #1B5F34;
+}
+
+.text-green-medium {
+    color: #B0D2BF;
+}
+
+.text-green-light {
+    color: #C7F9CC;
+}
+
+.text-blue-dark {
+    color: #1B445F;
+}
+
+.text-blue-medium {
+    color: #4D7A96;
+}
+
+.text-blue-light {
+    color: #C4E9E7;
+}
+
+.text-gold {
+    color: #DECD31;
+}
+
+.text-white {
+    color: #F7F7F7;
+}
+
+.text-black {
+    color: #141414;
+}

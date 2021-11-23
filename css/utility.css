@@ -1,0 +1,171 @@
+.bg-green-dark {
+    background-color: var(--dark-green);
+}
+
+/* Constants */
+
+:root {
+
+    /* Colors */
+
+    --dark-green: #1b5f34;
+    --medium-green: #b0d2bf;
+    --light-green: #c7f9cc;
+    --dark-blue: #1b445f;
+    --medium-blue: #4d7a96;
+    --light-blue: #c4e9e7;
+    --gold: #decd31;
+    --white: #f7f7f7;
+    --black: #141414;
+
+    /* Text sizes */
+
+    --text-xxl: 48px;
+    --text-xl: 32px;
+    --text-l: 24px;
+    --text-m: 16px;
+
+    /* End text sizes */
+
+}
+
+/* End constants */
+
+/* Color classes */
+
+.bg-green-medium {
+    background-color: var(--medium-green);
+}
+
+.bg-green-light {
+    background-color: var(--light-green);
+}
+
+.bg-blue-dark {
+    background-color: var(--dark-blue);
+}
+
+.bg-blue-medium {
+    background-color: var(--medium-blue);
+}
+
+.bg-blue-light {
+    background-color: var(--light-blue);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+.text-green-dark {
+    color: var(--dark-green);
+}
+
+.text-green-medium {
+    color: var(--medium-green);
+}
+
+.text-green-light {
+    color: var(--light-green);
+}
+
+.text-blue-dark {
+    color: var(--dark-blue);
+}
+
+.text-blue-medium {
+    color: var(--medium-blue);
+}
+
+.text-blue-light {
+    color: var(--light-blue);
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+/* End color classes */
+
+/* Text-related classes */
+
+.text-xxl {
+    font-size: var(--text-xxl);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-l {
+    font-size: var(--text-l);
+}
+
+.text-m {
+    font-size: var(--text-m);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* End text-related classes */
+
+/* Component classes */
+
+.btn {
+    font-family: First Order Plain, fantasy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+
+    text-decoration: none;
+    margin: 0 20px;
+    height: 48px;
+    width: 33%;
+    max-width: 169px;
+
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-dark {
+    filter: drop-shadow(0px 4px 0px var(--dark-blue));
+    background-color: var(--dark-green);
+    color: var(--light-green);
+}
+
+.btn-light{
+    filter: drop-shadow(0px 4px 0px var(--medium-blue));
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.card {
+    background-color: var(--dark-green);
+    color: var(--light-green);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* End component classes */

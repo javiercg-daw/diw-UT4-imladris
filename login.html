@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="./css/main.css"/>
     <title>Imladris</title>
-  </head>
-  <body>
-    <header>
-      <img src="/img/logo.svg" alt="Imladris Logo" />
-      <h1>Log In - Imladris</h1>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/characters.html">Characters</a></li>
-          <li><a href="/films.html">Films</a></li>
-        </ul>
-      </nav>
+</head>
+<body>
+<div class="body-container">
+    <header class="bg-green-dark">
+        <div class="header__container">
+            <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
+            <h1 class="text-green-light"><a href="/">Imladris</a></h1>
+
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li><a class="text-green-light" href="/index.html">Home</a></li>
+                    <li>
+                        <a class="text-green-light" href="/characters.html">Characters</a>
+                    </li>
+                    <li><a class="text-green-light" href="/films.html">Films</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__decoration-line bg-blue-dark"></div>
     </header>
 
-    <main class="bg-green-light">
-      <h2>Log In</h2>
-      <form action="" method="post">
-        <fieldset>
-          <label for="email">
-            Email
-            <input type="email" name="email" required />
-          </label>
-          <label for="password">
-            Password
-            <input type="password" name="password" />
-          </label>
+    <main class="register__main card">
+        <h2 class="text-xl text-align-center">Log In</h2>
+        <form action="" method="post">
+            <fieldset class="register__fieldset">
+                <label class="register__field-label"
+                       for="email">
+                    Email
+                    <input class="register__field"
+                           type="email" name="email" id="email" required/>
+                </label>
+                <label class="register__field-label"
+                       for="password">
+                    Password
+                    <input class="register__field"
+                           type="password" name="password" id="password"/>
+                </label>
 
-          <button type="submit">Log In</button>
-        </fieldset>
-      </form>
+                <button class="register__btn btn btn-light" type="submit">Log In</button>
+            </fieldset>
+        </form>
 
-      <a href="./register.html">Sign Up</a>
-      <a href="">Forgot your password?</a>
+        <footer class="register__footer">
+            <a class="text-align-center"
+               href="./register.html">Sign Up</a>
+            <a class="text-align-center"
+               href="">Forgot your password?</a>
+        </footer>
     </main>
 
     <footer class="bg-blue-dark">
-      <div class="footer__container">
-        <p class="footer__brand text-blue-light">Imladris</p>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li>
-              <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
-            </li>
-            <li><a class="text-blue-light" href="">Legal Notice</a></li>
-            <li><a class="text-blue-light" href="">Privacy Policy</a></li>
-            <li><a class="text-blue-light" href="">Cookies</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="footer__container">
+            <p class="footer__brand text-blue-light">Imladris</p>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
+                    </li>
+                    <li><a class="text-blue-light" href="">Legal Notice</a></li>
+                    <li><a class="text-blue-light" href="">Privacy Policy</a></li>
+                    <li><a class="text-blue-light" href="">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
-  </body>
+</div>
+</body>
 </html>

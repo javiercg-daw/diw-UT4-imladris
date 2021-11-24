@@ -1,5 +1,7 @@
 @import "utility.css";
 
+/* Reset */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -55,7 +57,6 @@ table {
     border-spacing: 0;
 }
 
-/* Reset end */
 
 /* Main */
 
@@ -94,7 +95,6 @@ a {
     color: inherit;
 }
 
-/* End main */
 
 /* Header */
 
@@ -153,7 +153,6 @@ h1 {
     line-height: 21px;
 }
 
-/* End header */
 
 /* Footer */
 
@@ -198,4 +197,112 @@ h1 {
     font-size: var(--text-m);
 }
 
-/* End footer */
+
+/* Index */
+
+
+.main__container {
+    width: 100%;
+    height: max-content;
+}
+
+.main__text-primary {
+    background-image: url("../img/rivendell.jpg");
+    background-position: 20%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Libre Baskerville, Baskerville, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-xxl);
+    line-height: 60px;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.main__text-primary {
+    padding: 0 25%;
+}
+
+.main__text-secondary {
+    min-height: 24vh;
+    font-family: Libre Baskerville, Baskerville, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-l);
+    line-height: 36px;
+    padding: 20px 50px;
+    display: flex;
+}
+
+.main__text-secondary > p {
+    max-width: 50%;
+}
+
+.main__buttons {
+    margin-left: 20px;
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* Register & login */
+
+.register__main {
+    margin: 20px 25%;
+}
+
+.register__fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0 45px 0;
+}
+
+.register__field-label {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16.67% 25px 16.67%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.register__field {
+    margin-top: 5px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: none;
+    font-size: var(--text-l);
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.register__footer a {
+    text-decoration: underline;
+}
+
+.register__btn {
+    margin-top: 20px;
+}
+
+.register__footer {
+    max-width: 33%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}

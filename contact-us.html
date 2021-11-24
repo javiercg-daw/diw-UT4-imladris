@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <title>Contact Us - Imladris</title>
-  </head>
-  <body>
-    <header>
-      <img src="/img/logo.svg" alt="Imladris Logo" />
-      <h1>Imladris</h1>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/characters.html">Characters</a></li>
-          <li><a href="/films.html">Films</a></li>
-        </ul>
-      </nav>
+</head>
+<body>
+<div class="body-container">
+    <header class="bg-green-dark">
+        <div class="header__container">
+            <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
+            <h1 class="text-green-light"><a href="/">Imladris</a></h1>
+
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li><a class="text-green-light" href="/index.html">Home</a></li>
+                    <li>
+                        <a class="text-green-light" href="/characters.html">Characters</a>
+                    </li>
+                    <li><a class="text-green-light" href="/films.html">Films</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__decoration-line bg-blue-dark"></div>
     </header>
 
-    <main>
-      <h2>Contact Us</h2>
-      <section>
-        <p>Elementum at tempor, quam ut a sed vel nisl praesent.</p>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus libero
-          amet eu turpis eu cras. Hac accumsan ridiculus lectus ullamcorper
-          urna, tincidunt adipiscing. Odio sed mauris ac neque elementum id
-          rutrum sed.
-        </p>
-      </section>
-      <section>
-        <h3>Tincidunt rutrum molestie ac in nibh sit ut.</h3>
-        <p>
-          Adipiscing in sed non eu, risus:
-          <a href="mailto:">asdasdasdasd@aasdasdas.com</a>
-        </p>
-      </section>
-      <img src="./img/gwaihir.jpg" alt="Gwaihir rescues Gandalf on Orthanc" />
+    <main class="contact__main">
+        <h2 class="text-green-dark text-xl text-align-center">Contact Us</h2>
+        <section class="card">
+            <i class="las la-map-marked text-xl"></i>
+            <p class="text-l">Elementum at tempor, quam ut a sed vel nisl praesent.</p>
+        </section>
+        <section class="card">
+            <i class="las la-envelope text-xl"></i>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus libero
+                amet eu turpis eu cras. Hac accumsan ridiculus lectus ullamcorper
+                urna, tincidunt adipiscing. Odio sed mauris ac neque elementum id
+                rutrum sed.
+            </p>
+        </section>
+        <section class="card">
+            <h3 class="text-l">Tincidunt rutrum molestie ac in nibh sit ut.</h3>
+            <p>
+                Adipiscing in sed non eu, risus:
+                <a class="text-underline" href="mailto:">asdasdasdasd@aasdas.com</a>
+            </p>
+        </section>
+        <img src="./img/gwaihir.jpg" alt="Gwaihir rescues Gandalf on Orthanc"/>
     </main>
 
-    <footer>
-      <p>Imladris</p>
-      <nav>
-        <ul>
-          <li><a href="./contact-us.html">Contact Us</a></li>
-          <li><a href="">Legal Notice</a></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Cookies</a></li>
-        </ul>
-      </nav>
+    <footer class="bg-blue-dark">
+        <div class="footer__container">
+            <p class="footer__brand text-blue-light">Imladris</p>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
+                    </li>
+                    <li><a class="text-blue-light" href="">Legal Notice</a></li>
+                    <li><a class="text-blue-light" href="">Privacy Policy</a></li>
+                    <li><a class="text-blue-light" href="">Cookies</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
-  </body>
+</div>
+</body>
 </html>

@@ -202,7 +202,7 @@ h1 {
 
 .main__container {
     width: 100%;
-    height: max-content;
+    min-height: 100vh;
 }
 
 .main__text-primary {
@@ -306,6 +306,17 @@ h1 {
     flex-direction: column;
 }
 
+.register__form-toggle {
+    padding-top: 10px;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    color: var(--light-green);
+    font-size: var(--text-m);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 /* Contact */
 
@@ -362,4 +373,90 @@ h1 {
 .contact__text-3 {
     grid-row: 6/span 2;
     grid-column: 1/span 4;
+}
+
+
+/* Home */
+
+.home__main-container {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+
+    width: 100%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    display: grid;
+    grid:
+        [row1-start] "qotd qotd qotd" minmax(10rem, 1fr) [row1-end]
+        [row2-start] "highlight highlight highlight" minmax(10rem, 1fr) [row2-end]
+        [row3-start] "quote1 quote2 quote3" minmax(10rem, 1fr) [row3-end]
+        / 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.home__qotd {
+    background-color: var(--dark-green);
+    border-radius: 5px;
+    width: 100%;
+    grid-area: qotd;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.home__qotd-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--light-green);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home__main-container h2 {
+    font-variant: small-caps;
+}
+
+.home__qotd-image {
+    grid-column: 2;
+
+    height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.home__qotd-author {
+    align-self: flex-end;
+}
+
+.home__highlight {
+    background-color: var(--dark-green);
+    border-radius: 5px;
+    /*height: 33.33%;*/
+    width: 100%;
+
+    grid-area: highlight;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.home__highlight-image {
+    height: 100%;
+    border-radius: 5px;
+    max-width: 100%;
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.home__highlight-title {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
 }

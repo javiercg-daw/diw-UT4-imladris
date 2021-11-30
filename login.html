@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="body-container">
-    <header class="bg-green-dark">
+    <header id="page-header" class="bg-green-dark">
         <div class="header__container">
             <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
-            <h1 class="text-green-light"><a href="/">Imladris</a></h1>
+            <h1 class="text-green-light"><a href="./index.html">Imladris</a></h1>
 
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
@@ -27,35 +27,6 @@
         </div>
         <div class="header__decoration-line bg-blue-dark"></div>
     </header>
-
-    <main class="register__main card">
-        <h2 class="text-xl text-align-center">Log In</h2>
-        <form action="" method="post">
-            <fieldset class="register__fieldset">
-                <label class="register__field-label"
-                       for="email">
-                    Email
-                    <input class="register__field"
-                           type="email" name="email" id="email" required/>
-                </label>
-                <label class="register__field-label"
-                       for="password">
-                    Password
-                    <input class="register__field"
-                           type="password" name="password" id="password"/>
-                </label>
-
-                <button class="register__btn btn btn-light" type="submit">Log In</button>
-            </fieldset>
-        </form>
-
-        <footer class="register__footer">
-            <a class="text-align-center"
-               href="./register.html">Sign Up</a>
-            <a class="text-align-center"
-               href="">Forgot your password?</a>
-        </footer>
-    </main>
 
     <footer class="bg-blue-dark">
         <div class="footer__container">
@@ -73,5 +44,7 @@
         </div>
     </footer>
 </div>
+
+<script src="/js/login.js" type="module"></script>
 </body>
 </html>

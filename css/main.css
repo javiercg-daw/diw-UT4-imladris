@@ -477,7 +477,7 @@ h1 {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     padding: 20px;
@@ -495,7 +495,7 @@ h1 {
 
 .character__data-title {
     text-align: center;
-    margin:20px auto;
+    margin: 20px auto;
 }
 
 .character__img-container {
@@ -589,10 +589,9 @@ h1 {
 
     width: 33.33%;
     margin: 10px;
-
 }
 
-.list__article p {
+.list__article-title {
     grid-column: 1;
     grid-row: 1;
     padding: 20px 0 20px 20px;
@@ -615,4 +614,16 @@ h1 {
     background: linear-gradient(
             90deg, var(--dark-green) 0%,
             rgba(196, 196, 196, 0) 100%);
+}
+
+.list__main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min(10rem, 100%), 1fr));
+    grid-gap: 20px;
+    margin: 20px 50px;
+}
+
+.list__article-character {
+    margin: 0;
+    width: 100%;
 }

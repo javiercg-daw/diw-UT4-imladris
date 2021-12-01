@@ -16,17 +16,19 @@ const init = {
     cache: 'default'
 }
 
-
-document.addEventListener('DOMContentLoaded', async function () {
+const fetchAndRender = async function () {
     const response = await fetch(request, init);
     // TODO: error handling (how? try several times and redirect to 404?)
     const body = await response.json();
     const data = body.docs;
-    console.log(body);
-    const container = document.querySelector('.list__main');
+
+    const container = document.querySelector('.list__main-grid');
     data.forEach(item => container.insertAdjacentHTML('beforeend', `
-        <article class="list__article">
-            <a href="#">${item.name}</a>
+        <article class="list__article list__article-character">
+            <a class="list__article-title" 
+            href="#">${item.name}</a>
         </article>
     `))
-})
+}
+
+document.addEventListener('DOMContentLoaded', fetchAndRender)

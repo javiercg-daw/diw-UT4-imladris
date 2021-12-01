@@ -20,10 +20,10 @@
 
     /* Text sizes */
 
-    --text-xxl: 48px;
-    --text-xl: 32px;
-    --text-l: 24px;
-    --text-m: 16px;
+    --text-xxl: 3rem;
+    --text-xl: 2rem;
+    --text-l: 1.5rem;
+    --text-m: 1rem;
 
 }
 

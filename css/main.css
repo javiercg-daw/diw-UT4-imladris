@@ -467,16 +467,84 @@ h1 {
 .character__main {
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
 }
 
 .character__data {
+    grid-column: 1;
+    font-size: var(--text-l);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.character__data h2 {
+    font-size: var(--text-xl);
 }
 
 .character__data li::before {
     content: "• ";
+}
+
+.character__data-title {
+    text-align: center;
+    margin:20px auto;
+}
+
+.character__img-container {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.character__img {
+    box-sizing: border-box;
+    clip-path: circle(30% at 50% 35%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.character__quotes {
+    grid-column: 2;
+}
+
+.character__quote {
+    padding: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px 0;
+
+    color: var(--light-green);
+    font-size: var(--text-l);
+    background-color: var(--dark-green);
+    border-radius: 5px;
+}
+
+.character__quote:first-child {
+    margin-top: 0;
+}
+
+.character__quote:last-child {
+    margin-bottom: 0;
+}
+
+.character__quote p::before {
+    content: "“";
+}
+
+.character__quote p::after {
+    content: "”";
 }
 
 

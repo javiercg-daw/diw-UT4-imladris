@@ -1,34 +1,12 @@
-import {API_URI, TOKEN} from "./secret.js";
+import {fetchAndRenderList} from "./service.js";
 
-const HEADERS = new Headers({
-        'Accept': 'application/json',
-        'Authorization': `Bearer ${TOKEN}`
-    }
-)
+const URL = '/character?limit=50';
+const CONTAINER_SELECTOR = '.list__main-grid';
+const TEMPLATE = item => `
+    <article class="list__article list__article-character">
+        <p class="list__article-title" >${item.name}</p>
+        <a class="list__article-link" href="/character.html?id=${item._id}"></a>
+    </article>
+`;
 
-const LIMIT = 18;
-
-const request = new Request(`${API_URI}/character?limit=${LIMIT}`)
-const init = {
-    method: 'GET',
-    headers: HEADERS,
-    mode: 'cors',
-    cache: 'default'
-}
-
-const fetchAndRender = async function () {
-    const response = await fetch(request, init);
-    // TODO: error handling (how? try several times and redirect to 404?)
-    const body = await response.json();
-    const data = body.docs;
-
-    const container = document.querySelector('.list__main-grid');
-    data.forEach(item => container.insertAdjacentHTML('beforeend', `
-        <article class="list__article list__article-character">
-            <a class="list__article-title" 
-            href="#">${item.name}</a>
-        </article>
-    `))
-}
-
-document.addEventListener('DOMContentLoaded', fetchAndRender)
+document.addEventListener('DOMContentLoaded', async () => await fetchAndRenderList(URL, TEMPLATE, CONTAINER_SELECTOR));

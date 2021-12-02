@@ -627,3 +627,8 @@ h1 {
     margin: 0;
     width: 100%;
 }
+
+.list__article-link {
+    grid-column: 1/span 2;
+    grid-row: 1;
+}

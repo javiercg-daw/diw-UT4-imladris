@@ -3,15 +3,15 @@ import {fetchAndRenderItem, fetchAndRenderList} from "./service.js";
 const ID = new URLSearchParams(window.location.search).get('id');
 
 const CHARACTER_URL = `/character/${ID}`;
-const CHARACTER_CONTAINER_SELECTOR = '.character__main';
+const CHARACTER_CONTAINER_SELECTOR = '.detail__main';
 const CHARACTER_TEMPLATE = data => `
-    <section class="character__data bg-blue-dark text-blue-light">
-        <div class="character__img-container">
-            <img class="character__img"
+    <section class="detail__data bg-blue-dark text-blue-light">
+        <div class="detail__img-container">
+            <img class="detail__img"
                  src="./img/galadriel.jpg" alt="${data.name}"/>
         </div>
-        <div class="character__data-text">
-            <h2 class="character__data-title">${data.name}</h2>
+        <div class="detail__data-text">
+            <h2 class="detail__data-title">${data.name}</h2>
             <ul>
                 <li><span>Race:</span> ${data.race}</li>
                 <li><span>Gender:</span> ${data.gender}</li>
@@ -27,10 +27,10 @@ const CHARACTER_TEMPLATE = data => `
 `;
 
 const QUOTES_URL = `/character/${ID}/quote`;
-const QUOTES_CONTAINER_SELECTOR = '.character__quotes';
+const QUOTES_CONTAINER_SELECTOR = '.detail__items';
 const QUOTES_TEMPLATE = data => `
-    <article class="character__quote">
-        <p>${data.dialog}</p>
+    <article class="detail__item detail__quote">
+        <p class="detail__quote-text">${data.dialog}</p>
     </article>
 `
 

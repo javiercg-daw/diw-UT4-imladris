@@ -9,56 +9,44 @@
     <title>Galadriel - Imladris</title>
 </head>
 <body>
-<header>
-    <img src="/img/logo.svg" alt="Imladris Logo"/>
-    <h1>Imladris</h1>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/characters.html">Characters</a></li>
-            <li><a href="/films.html">Films</a></li>
-        </ul>
-    </nav>
+<header class="bg-green-dark">
+    <div class="header__container">
+        <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
+        <h1 class="text-green-light"><a href="./index.html">Imladris</a></h1>
+
+        <nav class="header__navbar">
+            <ul class="header__navbar-list">
+                <li><a class="text-green-light" href="/index.html">Home</a></li>
+                <li>
+                    <a class="text-green-light" href="/characters.html">Characters</a>
+                </li>
+                <li><a class="text-green-light" href="/films.html">Films</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header__decoration-line bg-blue-dark"></div>
 </header>
 
-<main>
-    <section>
-        <img src="./img/fellowship.jpg" alt="The Lord of the Rings: The Fellowship of the Ring Poster"/>
-        <h2>The Fellowship of the Ring</h2>
-        <ul>
-            "runtimeInMinutes": 178,
-            "budgetInMillions": 93,
-            "boxOfficeRevenueInMillions": 871.5,
-            "academyAwardNominations": 13,
-            "academyAwardWins": 4,
-            "rottenTomatoesScore": 91
-            <li><span>Runtime:</span> 178'</li>
-            <li><span>Budget:</span> $93.000.000</li>
-            <li><span>Box Office Revenue:</span> $871.500.000</li>
-            <li><span>Academy Award Nominations:</span> 13</li>
-            <li><span>Academy Award Wins:</span> 4</li>
-            <li><span>Rotten Tomatoes Score:</span> 91%</li>
-        </ul>
-    </section>
-
-    <section>
-        <article>
-            <p>“The power of the three rings is ended. The time has come for the Dominion of Men.”</p>
-            <p>— Galadriel</p>
-        </article>
-    </section>
+<main class="detail__main">
+    <section class="detail__items"></section>
 </main>
 
-<footer>
-    <p>Imladris</p>
-    <nav>
-        <ul>
-            <li><a href="./contact-us.html">Contact Us</a></li>
-            <li><a href="">Legal Notice</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Cookies</a></li>
-        </ul>
-    </nav>
+<footer class="bg-blue-dark">
+    <div class="footer__container">
+        <p class="footer__brand text-blue-light">Imladris</p>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li>
+                    <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
+                </li>
+                <li><a class="text-blue-light" href="">Legal Notice</a></li>
+                <li><a class="text-blue-light" href="">Privacy Policy</a></li>
+                <li><a class="text-blue-light" href="">Cookies</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
+
+<script src="js/film.js" type="module"></script>
 </body>
 </html>

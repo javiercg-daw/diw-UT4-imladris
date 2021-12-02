@@ -522,6 +522,22 @@ h1 {
 
 .detail__items {
     grid-column: 2;
+    counter-reset: items;
+}
+
+.detail__items-ordered p::before{
+    counter-increment: items;
+    content: counter(items)". ";
+}
+
+.detail__items-ordered p::after{
+    content: none;
+}
+
+.detail__items-title {
+    color: var(--dark-green);
+    font-size: var(--text-xl);
+    margin-bottom: 20px;
 }
 
 .detail__item {

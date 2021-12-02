@@ -10,7 +10,7 @@ export const fetchResponseBody = async url => {
                 'Authorization': `Bearer ${TOKEN}`
             }),
             mode: 'cors',
-            cache: 'default'
+            cache: 'force-cache'
         });
     return await response.json();
 }

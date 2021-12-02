@@ -2,8 +2,10 @@
 
 To do:
 - [x] Finish adding styles to character detail page (not quite fixed, whatever)
-- [ ] Add styles to movie detail page
-- [ ] Add chapter names fetching to movie detail page
+- [x] Add styles to movie detail page
+- [x] Add quote names fetching to movie detail page
+- [x] Add books to film page and rename it
+- [ ] Add book detail page with chapters
 - [ ] Finish adding styles to home page
 - [ ] Add random fetching to home page
 - [ ] Add error handling to fetch methods
@@ -12,4 +14,4 @@ To do:
 - [ ] Add pagination to character list
 - [ ] Add pagination to character detail quotes
 - [ ] Add pagination to film detail chapters
-- [ ] Add movie name and link to character quotes in character detail page (maybe in homepage also)
+- [ ] Add movie name and link to character quotes in character detail page and in homepage

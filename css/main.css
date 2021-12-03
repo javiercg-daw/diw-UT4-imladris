@@ -739,3 +739,68 @@ h1 {
     grid-column: 1/span 2;
     grid-row: 1;
 }
+
+/* 404 */
+
+.not-found__main {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--text-l);
+    align-items: center;
+    color: var(--light-blue);
+    padding: 20px 0;
+}
+
+
+.not-found__main h2 {
+    font-size: var(--text-xl);
+}
+
+.not-found__main-animation {
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    mask: url('/img/logo.svg');
+}
+
+.not-found__main-animation-bg {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.not-found__main-animation-fg {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    animation: fade 5s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 100%;
+        -webkit-filter: none;
+        filter: none;
+    }
+    50% {
+        opacity: 80%;
+        -webkit-filter: drop-shadow(0px 0px 8px #FF7D29);
+        filter: drop-shadow(0px 0px 8px #FF7D29);
+    }
+    100% {
+        opacity: 100%;
+        -webkit-filter: none;
+        filter: none
+    }
+}
+
+.not-found__main-text {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gold);
+}

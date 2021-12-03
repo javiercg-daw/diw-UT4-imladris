@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="./css/main.css"/>
-    <title>The Films - Imladris</title>
+
+    <title>Imladris</title>
 </head>
 <body>
-<div class="body-container">
+<div class="body-container bg-blue-medium">
     <header class="bg-green-dark">
         <div class="header__container">
             <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
             <h1 class="text-green-light"><a href="./index.html">Imladris</a></h1>
+
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
                     <li><a class="text-green-light" href="/home.html">Home</a></li>
@@ -27,19 +29,16 @@
         <div class="header__decoration-line bg-blue-dark"></div>
     </header>
 
-    <main class="list__main">
-        <section class="list__film-section">
-            <h2 class="list__row-title"><span class="text-italic">The Lord of the Rings</span> books</h2>
-            <div class="list__row" id="books"></div>
-        </section>
-        <section class="list__film-section">
-            <h2 class="list__row-title"><span class="text-italic">The Lord of the Rings</span> films</h2>
-            <div class="list__row" id="lotr-films"></div>
-        </section>
-        <section class="list__film-section">
-            <h2 class="list__row-title"><span class="text-italic">The Hobbit</span> films</h2>
-            <div class="list__row" id="hobbit-films"></div>
-        </section>
+    <main class="not-found__main">
+        <h2>Not Found</h2>
+        <div class="not-found__main-animation">
+            <img class="not-found__main-animation-fg" src="/img/logo.svg" alt="Imladris Logo"/>
+            <img class="not-found__main-animation-bg" src="/img/logo-alt.svg" alt="Imladris Logo"/>
+            <div class="not-found__main-text">
+                <p>That which you sought could not be found</p>
+            </div>
+        </div>
+        <a href="javascript:history.back();">Go back</a>
     </main>
 
     <footer class="bg-blue-dark">
@@ -58,6 +57,5 @@
         </div>
     </footer>
 </div>
-<script src="js/books-films.js" type="module"></script>
 </body>
 </html>

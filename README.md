@@ -5,7 +5,7 @@ To do:
 - [x] Add styles to movie detail page
 - [x] Add quote names fetching to movie detail page
 - [x] Add books to film page and rename it
-- [ ] Add book detail page with chapters
+- [x] Add book detail page with chapters
 - [ ] Finish adding styles to home page
 - [ ] Add random fetching to home page
 - [ ] Add error handling to fetch methods

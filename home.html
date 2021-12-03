@@ -9,93 +9,103 @@
     <title>Imladris</title>
 </head>
 <body>
-<header class="bg-green-dark">
-    <div class="header__container">
-        <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
-        <h1 class="text-green-light"><a href="./index.html">Imladris</a></h1>
+<div class="body-container">
+    <header class="bg-green-dark">
+        <div class="header__container">
+            <img class="header__logo-img" src="/img/logo.svg" alt="Imladris Logo"/>
+            <h1 class="text-green-light"><a href="./index.html">Imladris</a></h1>
 
-        <nav class="header__navbar">
-            <ul class="header__navbar-list">
-                <li><a class="text-green-light" href="/index.html">Home</a></li>
-                <li>
-                    <a class="text-green-light" href="/characters.html">Characters</a>
-                </li>
-                <li><a class="text-green-light" href="/books-films.html">Films & Books</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="header__decoration-line bg-blue-dark"></div>
-</header>
-
-<main class="home__main-container">
-    <section class="home__qotd">
-        <div class="home__qotd-text">
-            <h2>Quote of the Day</h2>
-            <p class="home__qotd-quote text-l">
-                “It's calling to him, Sam. His Eye is almost on me.”
-            </p>
-            <p class="home__qotd-author">— Frodo Baggins</p>
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li><a class="text-green-light" href="/index.html">Home</a></li>
+                    <li>
+                        <a class="text-green-light" href="/characters.html">Characters</a>
+                    </li>
+                    <li><a class="text-green-light" href="/books-films.html">Films & Books</a></li>
+                </ul>
+            </nav>
         </div>
-        <img class="home__qotd-image"
-             src="./img/frodo.jpeg"
-             alt="Frodo Baggins"/>
-    </section>
+        <div class="header__decoration-line bg-blue-dark"></div>
+    </header>
 
-    <section class="home__highlight">
-        <h2 class="home__highlight-title">Character Highlight</h2>
-        <img class="home__highlight-image"
-             src="./img/tuor.jpg"
-             alt="Tuor Reaches the Hidden City of Gondolin"
-        />
-        <div class="home__highlight-text">
-            <p>Tuor</p>
-            <a href="">More about this character</a>
+    <main class="home__main-grid">
+        <article class="home__article-full-width home__qotd">
+            <div class="home__article-full-width-text">
+                <h2 class="home__qotd-title">Quote of the Day</h2>
+                <p class="quote-text text-l">It's calling to him, Sam. His Eye is almost on me.</p>
+                <p class="home__qotd-character quote-character">Frodo Baggins</p>
+            </div>
+            <img class="home__qotd-image"
+                 src="./img/frodo.jpeg"
+                 alt="Frodo Baggins"/>
+            <div class="home__qotd-image-gradient"></div>
+            <a class="home__article-full-width-link" href="/character.html?id=5cd99d4bde30eff6ebccfc15"></a>
+        </article>
+
+        <article class="home__article-full-width home__highlight">
+            <h2 class="home__highlight-title">Character Highlight</h2>
+            <img class="home__highlight-image"
+                 src="./img/tuor.jpg"
+                 alt="Tuor Reaches the Hidden City of Gondolin"
+            />
+            <div class="home__article-full-width-text">
+                <p class="text-xl">Tuor</p>
+                <p class="home__highlight-more">See more about this character</p>
+            </div>
+            <a class="home__article-full-width-link" href="/character.html?id=5cd99d4bde30eff6ebccfe35"></a>
+        </article>
+
+        <article class="home__quote-secondary">
+            <div class="home__quote-secondary-text">
+                <p class="quote-text">Your treachery has already cost many lives. Thousands more are now
+                    at risk. But you could save them Saruman. You were deep in the
+                    enemy's counsel.</p>
+                <footer>
+                    <p class="quote-character">Gandalf</p>
+                    <p class="home__quote-secondary-more">See more quotes from this character</p>
+                </footer>
+            </div>
+            <a class="home__quote-secondary-link" href="/character.html?id=5cd99d4bde30eff6ebccfea0"></a>
+        </article>
+        <article class="home__quote-secondary">
+            <div class="home__quote-secondary-text">
+                <p class="quote-text">They will answer to the King of Gondor. Andúril, the Flame of the
+                    West, forged from the shards of Narsil.</p>
+                <footer>
+                    <p class="quote-character">— Elrond</p>
+                    <p class="home__quote-secondary-more">See more quotes from this character</p>
+                </footer>
+            </div>
+            <a class="home__quote-secondary-link" href="/character.html?id=5cd99d4bde30eff6ebccfcc8"></a>
+        </article>
+        <article class="home__quote-secondary">
+            <div class="home__quote-secondary-text">
+                <p class="quote-text">You young rascals. A merry hunt you've led us on and now we find
+                    you feasting and —and smoking!</p>
+                <footer>
+                    <p class="quote-character">— Gimli</p>
+                    <p class="home__quote-secondary-more">See more quotes from this character</p>
+                </footer>
+            </div>
+            <a class="home__quote-secondary-link" href="/character.html?id=5cd99d4bde30eff6ebccfd23"></a>
+        </article>
+    </main>
+
+    <footer class="bg-blue-dark">
+        <div class="footer__container">
+            <p class="footer__brand text-blue-light">Imladris</p>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li>
+                        <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
+                    </li>
+                    <li><a class="text-blue-light" href="">Legal Notice</a></li>
+                    <li><a class="text-blue-light" href="">Privacy Policy</a></li>
+                    <li><a class="text-blue-light" href="">Cookies</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-
-    <section id="other-quotes">
-        <article>
-            <p class="quote-text">
-                “Your treachery has already cost many lives. Thousands more are now
-                at risk. But you could save them Saruman. You were deep in the
-                enemy's counsel.”
-            </p>
-            <p class="quote-author">— Gandalf</p>
-            <a href="">More quotes from this character</a>
-        </article>
-        <article>
-            <p class="quote-text">
-                "They will answer to the King of Gondor. Andúril, the Flame of the
-                West, forged from the shards of Narsil."
-            </p>
-            <p class="quote-author">— Elrond</p>
-            <a href="">More quotes from this character</a>
-        </article>
-        <article>
-            <p class="quote-text">
-                “You young rascals. A merry hunt you've led us on and now we find
-                you feasting and —and smoking!”
-            </p>
-            <p class="quote-author">— Gimli</p>
-            <a href="">More quotes from this character</a>
-        </article>
-    </section>
-</main>
-
-<footer class="bg-blue-dark">
-    <div class="footer__container">
-        <p class="footer__brand text-blue-light">Imladris</p>
-        <nav class="footer__nav">
-            <ul class="footer__nav-list">
-                <li>
-                    <a class="text-blue-light" href="./contact-us.html">Contact Us</a>
-                </li>
-                <li><a class="text-blue-light" href="">Legal Notice</a></li>
-                <li><a class="text-blue-light" href="">Privacy Policy</a></li>
-                <li><a class="text-blue-light" href="">Cookies</a></li>
-            </ul>
-        </nav>
-    </div>
-</footer>
+    </footer>
+</div>
 </body>
 </html>

@@ -30,7 +30,7 @@ const QUOTES_URL = `/character/${ID}/quote`;
 const QUOTES_CONTAINER_SELECTOR = '.detail__items';
 const QUOTES_TEMPLATE = data => `
     <article class="detail__item detail__quote">
-        <p class="detail__quote-text">${data.dialog}</p>
+        <p class="quote-text">${data.dialog}</p>
     </article>
 `
 

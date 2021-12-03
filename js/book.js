@@ -20,7 +20,7 @@ const CHAPTERS_URL = `/book/${ID}/chapter`;
 const CHAPTERS_CONTAINER_SELECTOR = '.detail__items';
 const CHAPTERS_TEMPLATE = data => `
     <li class="detail__item detail__quote">
-        <p class="detail__quote-text">${data.chapterName}</p>
+        <p class="quote-text">${data.chapterName}</p>
     </li>
 `
 

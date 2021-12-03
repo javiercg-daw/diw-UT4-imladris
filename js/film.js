@@ -29,8 +29,8 @@ const CHARACTERS_URL = '/character';
 const QUOTES_CONTAINER_SELECTOR = '.detail__items';
 const QUOTE_TEMPLATE = data => `
     <article class="detail__item">
-        <p class="detail__quote-text">${data.dialog}</p>
-        <p class="detail__quote-character">${data.character.name}</p>
+        <p class="quote-text">${data.dialog}</p>
+        <p class="quote-character detail__quote-character">${data.character.name}</p>
     </article>
 `
 

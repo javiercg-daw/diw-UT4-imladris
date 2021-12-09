@@ -11,6 +11,7 @@ Done:
 
 CSS:
 - [ ] Add responsive media queries
+- [ ] Add hamburger menu to mobile header
 - [ ] Add dark mode to home page
 - [ ] Add "tabs" to nav bar, transitions
 - [ ] Add transition to buttons
@@ -43,3 +44,4 @@ Changes from mockups:
 - Contact: image not scaled up
 - Character list: remove header text
 - Film list: remove zig-zag in image position
+- Some changes in text sizes and alignments (e.g. alignment of home secondary quotes 'see more' text)

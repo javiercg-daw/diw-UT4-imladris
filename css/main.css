@@ -245,12 +245,6 @@ h1 {
 
 /* Index page */
 
-
-.index__container {
-    width: 100%;
-    min-height: 100vh;
-}
-
 .index__text-primary {
     background-image: url("../img/rivendell.jpg");
     background-position: 20%;

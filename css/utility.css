@@ -164,6 +164,13 @@
     justify-content: center;
 }
 
+.btn:active {
+    border-bottom: none;
+    transform: translate(0, 5px);
+    filter: none;
+    transition: filter 0.1s ease, transform 0.1s ease;
+}
+
 .btn-dark {
     filter: drop-shadow(0px 4px 0px var(--dark-secondary));
     background-color: var(--dark-primary);

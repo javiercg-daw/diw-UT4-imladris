@@ -1,4 +1,8 @@
-# diw-UT4-imladris
+# Imladris
+## Diseño de Aplicaciones Web / Desarrollo Web en Entorno Cliente
+### Autor: Javier Clavijo García
+
+---
 
 Done:
 - [x] Finish adding styles to character detail page
@@ -13,9 +17,9 @@ CSS:
 - [x] Add responsive media queries
 - [x] Add hamburger menu to mobile header
 - [x] Add dark mode to home page
-- [ ] Add "tabs" to nav bar, transitions
-- [ ] Add transition to buttons
-- [ ] Add inline styles, etc.
+- [x] Add "tabs" to nav bar, transitions
+- [x] Add transition to buttons
+- [x] Add inline styles, etc.
 - [ ] Substitute placeholder texts
 - [ ] Add empty list message in film/character quote sections
 - [ ] Justify changes (in readme file) 
@@ -45,3 +49,5 @@ Changes from mockups:
 - Character list: remove header text
 - Film list: remove zig-zag in image position
 - Some changes in text sizes and alignments (e.g. alignment of home secondary quotes 'see more' text)
+
+CSS en lín

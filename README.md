@@ -10,7 +10,7 @@ Done:
 - [x] Add 404 page
 
 CSS:
-- [ ] Add responsive media queries
+- [x] Add responsive media queries
 - [ ] Add hamburger menu to mobile header
 - [ ] Add dark mode to home page
 - [ ] Add "tabs" to nav bar, transitions

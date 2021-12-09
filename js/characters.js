@@ -1,6 +1,6 @@
 import {fetchAndRenderList} from "./service.js";
 
-const CHARACTERS_URL = '/character?limit=50';
+const CHARACTERS_URL = '/character';
 const CHARACTERS_CONTAINER_SELECTOR = '.list__main-grid';
 const CHARACTERS_TEMPLATE = item => `
     <article class="list__article list__article-character">

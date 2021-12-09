@@ -877,8 +877,10 @@ h1 {
     .index__text-primary {
         font-size: var(--text-xxl);
         line-height: var(--text-xxl);
-        padding: 0 16px;
-        height: 50vh;
+        padding: 20px 16px;
+        box-sizing: border-box;
+        min-height: 50vh;
+        height: fit-content;
         background-size: cover;
     }
 
@@ -981,6 +983,7 @@ h1 {
 
     .register__field-label {
         padding: 0 0 25px;
+        box-sizing: border-box;
     }
 
     .register__footer {
@@ -1015,17 +1018,15 @@ h1 {
 
     .list__row .list__article {
         width: 100%;
-    }
-
-    .list__article {
         margin: 10px 0;
     }
 
 
     /* Home */
+
     .home__main-grid {
         margin: 20px 16px;
-        grid-template-columns: minmax(0,100vw);
+        grid-template-columns: minmax(0, 100vw);
         grid-auto-rows: minmax(0, min-content);
     }
 
@@ -1043,6 +1044,31 @@ h1 {
 
     .home__article-full-width {
         grid-template-rows: minmax(28vh, min-content);
+    }
+
+
+    /* Character/film detail */
+    .detail__main {
+        margin: 0;
+        padding: 20px 0;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .detail__data {
+        border-radius: 0;
+    }
+
+    .detail__items {
+        grid-column: 1;
+        padding: 0 20px;
+    }
+
+    .detail__items-title {
+        text-align: center;
+    }
+
+    .detail__item {
+        width: 100%;
     }
 
 }

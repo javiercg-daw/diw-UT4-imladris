@@ -21,11 +21,12 @@ export const fetchAndRenderItem = async function (url, template, containerSelect
     const container = document.querySelector(containerSelector);
     Object.keys(data).forEach(k => {
         if (!data[k]) {
-            data[k] = 'Unknown'
+            data[k] = 'Unknown';
         }
     })
 
-    container.insertAdjacentHTML('afterbegin', template(data))
+    document.title = `${data.name} - Imladris`;
+    container.insertAdjacentHTML('afterbegin', template(data));
 }
 
 export const fetchAndRenderList = async function (url, template, containerSelector) {

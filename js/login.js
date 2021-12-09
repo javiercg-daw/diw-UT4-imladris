@@ -10,8 +10,7 @@ const mockUsers = [
 
 const registerHTMLMain = `
 <main class="register__main card">
-        <h2 class="text-xl text-align-center">
-            Sign Up</h2>
+        <h2 class="text-xl text-align-center">Sign Up</h2>
         <form action="" method="post" data-action="register">
             <fieldset class="register__fieldset">
                 <p class="register__field-validation"></p>         

@@ -73,7 +73,7 @@ html {
 }
 
 body {
-    background-color: var(--medium-green);
+    background-color: var(--medium-primary);
     height: 100%;
     min-height: 100%;
 }
@@ -250,6 +250,7 @@ h1 {
 }
 
 .index__text-secondary > p {
+    color: var(--index-secondary-text);
     max-width: 50%;
 }
 
@@ -258,10 +259,17 @@ h1 {
     width: 50%;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 }
 
+.index__theme-toggle-label {
+    color: var(--light-secondary);
+}
+
+.index__theme-toggle-label input {
+    display: none;
+}
 
 /* Register & login */
 
@@ -320,7 +328,7 @@ h1 {
     box-sizing: border-box;
     background: none;
     border: none;
-    color: var(--light-green);
+    color: var(--light-primary);
     font-size: var(--text-m);
     text-decoration: underline;
     cursor: pointer;
@@ -402,8 +410,8 @@ h1 {
     grid-template-rows: minmax(0, 28vh);
     grid-gap: 20px;
 
-    background-color: var(--dark-green);
-    color: var(--light-green);
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
     font-size: var(--text-l);
     border-radius: 5px;
     margin: 0;
@@ -429,7 +437,7 @@ h1 {
     grid-column: 2;
     grid-row: 1;
     background: linear-gradient(
-            90deg, var(--dark-green) 0%,
+            90deg, var(--dark-primary) 0%,
             rgba(196, 196, 196, 0) 100%);
 }
 
@@ -478,7 +486,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
 
-    color: var(--light-green);
+    color: var(--light-primary);
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -507,7 +515,7 @@ h1 {
     grid-column: 1;
     grid-row: 1;
     background: linear-gradient(
-            -90deg, var(--dark-green) 0%,
+            -90deg, var(--dark-primary) 0%,
             rgba(196, 196, 196, 0) 100%);
 }
 
@@ -518,9 +526,9 @@ h1 {
 
 .home__quote-secondary {
     padding: 20px;
-    background-color: var(--dark-green);
+    background-color: var(--dark-primary);
     border-radius: 5px;
-    color: var(--light-green);
+    color: var(--light-primary);
 
     display: grid;
 }
@@ -622,7 +630,7 @@ h1 {
 }
 
 .detail__items-title {
-    color: var(--dark-green);
+    color: var(--dark-primary);
     font-size: var(--text-xl);
     margin-bottom: 20px;
 }
@@ -634,9 +642,9 @@ h1 {
     max-width: 100%;
     margin: 20px 0;
 
-    color: var(--light-green);
+    color: var(--light-primary);
     font-size: var(--text-l);
-    background-color: var(--dark-green);
+    background-color: var(--dark-primary);
     border-radius: 5px;
 }
 
@@ -684,7 +692,7 @@ h1 {
 }
 
 .list__row-title {
-    color: var(--dark-green);
+    color: var(--dark-primary);
     font-size: var(--text-xl);
     text-align: center;
     padding: 20px 0;
@@ -705,8 +713,8 @@ h1 {
     grid-template-rows: minmax(0, 28vh);
     grid-gap: 20px;
 
-    background-color: var(--dark-green);
-    color: var(--light-green);
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
     font-size: var(--text-l);
 
     border-radius: 5px;
@@ -737,7 +745,7 @@ h1 {
     grid-column: 2;
     grid-row: 1;
     background: linear-gradient(
-            90deg, var(--dark-green) 0%,
+            90deg, var(--dark-primary) 0%,
             rgba(196, 196, 196, 0) 100%);
 }
 
@@ -765,7 +773,7 @@ h1 {
     flex-direction: column;
     font-size: var(--text-l);
     align-items: center;
-    color: var(--light-blue);
+    color: var(--light-secondary);
     padding: 20px 0;
 }
 
@@ -823,7 +831,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--gold);
+    color: var(--accent);
 }
 
 /* Tablet-specific styles */
@@ -840,7 +848,6 @@ h1 {
 @media screen and (max-width: 768px) {
 
     /* Header */
-
     .header__container {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
@@ -849,7 +856,7 @@ h1 {
 
     .header__navbar-list {
         flex-direction: column;
-        background-color: var(--dark-blue);
+        background-color: var(--dark-secondary);
         text-align: center;
         height: fit-content;
         width: 100vw;
@@ -857,7 +864,7 @@ h1 {
 
     .header__navbar-list a {
         width: 100%;
-        color: var(--light-blue);
+        color: var(--light-secondary);
     }
 
     .header__navbar-list li {
@@ -887,10 +894,10 @@ h1 {
         justify-content: center;
         align-items: center;
         font-size: 64px;
-        color: var(--light-green);
+        color: var(--light-primary);
     }
 
-    #menu-toggle:checked ~ nav  {
+    #menu-toggle:checked ~ nav {
         visibility: visible;
         opacity: 100%;
     }

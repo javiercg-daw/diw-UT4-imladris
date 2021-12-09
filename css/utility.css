@@ -1,5 +1,5 @@
 .bg-green-dark {
-    background-color: var(--dark-green);
+    background-color: var(--dark-primary);
 }
 
 /* Constants */
@@ -8,15 +8,19 @@
 
     /* Colors */
 
-    --dark-green: #1b5f34;
-    --medium-green: #b0d2bf;
-    --light-green: #c7f9cc;
-    --dark-blue: #1b445f;
-    --medium-blue: #4d7a96;
-    --light-blue: #c4e9e7;
-    --gold: #decd31;
+    --dark-primary: #1b5f34;
+    --medium-primary: #b0d2bf;
+    --light-primary: #c7f9cc;
+    --dark-secondary: #1b445f;
+    --medium-secondary: #4d7a96;
+    --light-secondary: #c4e9e7;
+    --accent: #decd31;
     --white: #f7f7f7;
     --black: #141414;
+
+    /* Index page text color --to allow further customization of dark mode */
+
+    --index-secondary-text: #1b5f34;
 
     /* Text sizes */
 
@@ -28,30 +32,43 @@
 }
 
 
+/* Dark mode */
+
+:root[data-theme='dark'] {
+    --dark-primary: #1b445f;
+    --medium-primary: #4d7a96;
+    --light-primary: #c4e9e7;
+    --dark-secondary: #1b5f34;
+    --medium-secondary: #b0d2bf;
+    --light-secondary: #c7f9cc;
+    --index-secondary-text: #c4e9e7;
+}
+
+
 /* Color classes */
 
 .bg-green-medium {
-    background-color: var(--medium-green);
+    background-color: var(--medium-primary);
 }
 
 .bg-green-light {
-    background-color: var(--light-green);
+    background-color: var(--light-primary);
 }
 
 .bg-blue-dark {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-secondary);
 }
 
 .bg-blue-medium {
-    background-color: var(--medium-blue);
+    background-color: var(--medium-secondary);
 }
 
 .bg-blue-light {
-    background-color: var(--light-blue);
+    background-color: var(--light-secondary);
 }
 
 .bg-gold {
-    background-color: var(--gold);
+    background-color: var(--accent);
 }
 
 .bg-white {
@@ -63,31 +80,31 @@
 }
 
 .text-green-dark {
-    color: var(--dark-green);
+    color: var(--dark-primary);
 }
 
 .text-green-medium {
-    color: var(--medium-green);
+    color: var(--medium-primary);
 }
 
 .text-green-light {
-    color: var(--light-green);
+    color: var(--light-primary);
 }
 
 .text-blue-dark {
-    color: var(--dark-blue);
+    color: var(--dark-secondary);
 }
 
 .text-blue-medium {
-    color: var(--medium-blue);
+    color: var(--medium-secondary);
 }
 
 .text-blue-light {
-    color: var(--light-blue);
+    color: var(--light-secondary);
 }
 
 .text-gold {
-    color: var(--gold);
+    color: var(--accent);
 }
 
 .text-white {
@@ -148,20 +165,20 @@
 }
 
 .btn-dark {
-    filter: drop-shadow(0px 4px 0px var(--dark-blue));
-    background-color: var(--dark-green);
-    color: var(--light-green);
+    filter: drop-shadow(0px 4px 0px var(--dark-secondary));
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
 }
 
 .btn-light {
-    filter: drop-shadow(0px 4px 0px var(--medium-blue));
-    background-color: var(--light-green);
-    color: var(--dark-green);
+    filter: drop-shadow(0px 4px 0px var(--medium-secondary));
+    background-color: var(--light-primary);
+    color: var(--dark-primary);
 }
 
 .card {
-    background-color: var(--dark-green);
-    color: var(--light-green);
+    background-color: var(--dark-primary);
+    color: var(--light-primary);
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;

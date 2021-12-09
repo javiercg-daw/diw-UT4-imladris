@@ -133,24 +133,62 @@ h1 {
 
 .header__navbar {
     grid-column: 7/13;
+    height: 100%;
 }
 
 .header__navbar-list {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr 20px;
+    z-index: 3;
 }
 
-.header__navbar-list a {
+.header__navbar-element {
+    grid-row: 1/span 2;
+    border-bottom: 20px solid var(--dark-secondary);
+}
+
+.header__navbar-link {
     text-decoration: none;
     font-family: First Order Plain, fantasy;
     font-style: normal;
     font-weight: normal;
-    font-size: var(--text-l);
     line-height: 21px;
+    font-size: var(--text-l);
+    color: var(--light-primary);
+    background: none;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.header__navbar-selected {
+    border-bottom-color: var(--medium-secondary);
+}
+
+.header__navbar-unselected:hover {
+    border-bottom-color: var(--medium-secondary);
+    transition: border-bottom-color 0.5s ease;
+}
+
+.header__navbar-selected-tab-marker {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: var(--medium-secondary);
+}
+
+/*.header__navbar-default-tab .header__navbar-link {*/
+/*    border-bottom: 20px solid var(--medium-secondary);*/
+/*    padding-bottom: 0;*/
+/*}*/
 
 .header__menu-toggle {
     display: none;
@@ -855,6 +893,7 @@ h1 {
     }
 
     .header__navbar-list {
+        display: flex;
         flex-direction: column;
         background-color: var(--dark-secondary);
         text-align: center;
@@ -862,15 +901,26 @@ h1 {
         width: 100vw;
     }
 
-    .header__navbar-list a {
+    .header__navbar-link {
         width: 100%;
+        height: 100%;
         color: var(--light-secondary);
-    }
-
-    .header__navbar-list li {
-        width: 100%;
+        display: flex;
+        align-items: center;
         padding: 20px;
         box-sizing: border-box;
+        transition: background-color 0.5s ease;
+        background-color: var(--dark-secondary);
+    }
+
+    .header__navbar-element {
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: none;
+    }
+
+    .header__navbar-link:hover {
+        background-color: var(--medium-secondary);
     }
 
     .header__navbar {

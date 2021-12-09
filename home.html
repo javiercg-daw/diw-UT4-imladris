@@ -21,11 +21,15 @@
             <input type="checkbox" id="menu-toggle"/>
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li><a class="text-green-light" href="/home.html">Home</a></li>
-                    <li>
-                        <a class="text-green-light" href="/characters.html">Characters</a>
+                    <li class="header__navbar-element header__navbar-selected">
+                        <a class="header__navbar-link" href="/home.html">Home</a>
                     </li>
-                    <li><a class="text-green-light" href="/books-films.html">Films & Books</a></li>
+                    <li class="header__navbar-element header__navbar-unselected">
+                        <a class="header__navbar-link" href="/characters.html">Characters</a>
+                    </li>
+                    <li class="header__navbar-element header__navbar-unselected">
+                        <a class="header__navbar-link" href="/books-films.html">Films & Books</a>
+                    </li>
                 </ul>
             </nav>
             <label class="header__menu-toggle" for="menu-toggle">

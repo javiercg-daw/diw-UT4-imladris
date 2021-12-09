@@ -706,6 +706,7 @@ h1 {
     grid-column: 1;
     grid-row: 1;
     padding: 20px 0 20px 20px;
+    box-sizing: border-box;
 }
 
 .list__article img {
@@ -970,7 +971,6 @@ h1 {
 
 
     /* Register & login */
-
     .register__main {
         margin: 20px 16px;
     }
@@ -981,6 +981,40 @@ h1 {
 
     .register__footer {
         max-width: 100%;
+    }
+
+
+    /* Character/film list */
+    .list__main-grid {
+        margin: 20px 16px;
+        grid-template-columns: 1fr;
+    }
+
+    .list__article-character {
+        height: 12.5vh;
+    }
+
+    .list__article-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .list__main {
+        padding: 20px 16px;
+        box-sizing: border-box;
+    }
+
+    .list__row {
+        flex-direction: column;
+    }
+
+    .list__row .list__article {
+        width: 100%;
+    }
+
+    .list__article {
+        margin: 10px 0;
     }
 
 }

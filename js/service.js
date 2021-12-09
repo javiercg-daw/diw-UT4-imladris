@@ -29,10 +29,18 @@ export const fetchAndRenderItem = async function (url, template, containerSelect
     container.insertAdjacentHTML('afterbegin', template(data));
 }
 
-export const fetchAndRenderList = async function (url, template, containerSelector) {
+export const fetchAndRenderList = async function (url, template, containerSelector, removeEmptyMessage = false) {
     const data = (await fetchResponseBody(url)).docs;
 
     const container = document.querySelector(containerSelector);
+
+    if (removeEmptyMessage) {
+        if (!data.length) {
+            return;
+        }
+        container.children[container.children.length - 1].remove();
+    }
+
     data.forEach(item =>
         container.insertAdjacentHTML('beforeend', template(item))
     )

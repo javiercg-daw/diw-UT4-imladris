@@ -34,11 +34,16 @@ const QUOTE_TEMPLATE = data => `
     </article>
 `
 
-const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector) {
+const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector, removeEmptyMessage = false) {
     const quoteData = (await fetchResponseBody(quoteUrl)).docs;
     const characterData = (await fetchResponseBody(characterUrl)).docs;
 
     const container = document.querySelector(containerSelector);
+    if (removeEmptyMessage && !quoteData.length) {
+        return;
+    }
+    container.children[container.children.length - 1].remove();
+
     quoteData.forEach(item => {
             let character = characterData.find(c => c._id === item.character);
             if (character.name === 'MINOR_CHARACTER') {
@@ -53,5 +58,5 @@ const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl
 
 document.addEventListener('DOMContentLoaded', async () => {
     await fetchAndRenderItem(FILM_URL, FILM_TEMPLATE, FILM_CONTAINER_SELECTOR);
-    await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR);
+    await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR, true);
 });

@@ -20,10 +20,11 @@ CSS:
 - [x] Add "tabs" to nav bar, transitions
 - [x] Add transition to buttons
 - [x] Add inline styles, etc.
-- [ ] Substitute placeholder texts
+- [x] Substitute placeholder texts
 - [ ] Add empty list message in film/character quote sections
 - [ ] Justify changes (in readme file) 
 - [ ] Add some comments where needed
+- [ ] Fix character/film detail image
 - [ ] Validate CSS, etc.
 
 JS:
@@ -49,5 +50,4 @@ Changes from mockups:
 - Character list: remove header text
 - Film list: remove zig-zag in image position
 - Some changes in text sizes and alignments (e.g. alignment of home secondary quotes 'see more' text)
-
-CSS en lín
+- Changes in navbar transitions: the other way was too time-consuming

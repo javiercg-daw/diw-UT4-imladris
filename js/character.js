@@ -8,7 +8,7 @@ const CHARACTER_TEMPLATE = data => `
     <section class="detail__data bg-blue-dark text-blue-light">
         <div class="detail__img-container">
             <img class="detail__img"
-                 src="./img/galadriel.jpg" alt="${data.name}"/>
+                 src="./img/character-blank.png" alt="${data.name}"/>
         </div>
         <div class="detail__data-text">
             <h2 class="detail__data-title">${data.name}</h2>
@@ -36,5 +36,5 @@ const QUOTES_TEMPLATE = data => `
 
 document.addEventListener('DOMContentLoaded', async () => {
     await fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR);
-    await fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR);
+    await fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR, true);
 });

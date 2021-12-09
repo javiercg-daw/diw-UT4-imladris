@@ -652,6 +652,11 @@ h1 {
     counter-reset: items;
 }
 
+.detail__items-no-items {
+    font-size: var(--text-l);
+    color: var(--dark-primary);
+}
+
 .detail__items-ordered p::before {
     counter-increment: items;
     content: counter(items) ". ";

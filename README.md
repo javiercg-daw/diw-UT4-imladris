@@ -11,7 +11,7 @@ Done:
 
 CSS:
 - [x] Add responsive media queries
-- [ ] Add hamburger menu to mobile header
+- [x] Add hamburger menu to mobile header
 - [ ] Add dark mode to home page
 - [ ] Add "tabs" to nav bar, transitions
 - [ ] Add transition to buttons

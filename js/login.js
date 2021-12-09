@@ -96,7 +96,7 @@ const loginHTMLMain = `
 
 const urlParams = new URLSearchParams(window.location.search);
 const register = urlParams.get('register');
-const header = document.querySelector('#page-header');
+const header = document.querySelector('header');
 
 const toggleHandler = function () {
     const action = this.dataset.action;

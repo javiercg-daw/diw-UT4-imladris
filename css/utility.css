@@ -170,3 +170,9 @@
 .text-underline {
     text-decoration: underline;
 }
+
+/* Mobile-specific styles */
+
+@media screen and (max-width: 768px) {
+
+}

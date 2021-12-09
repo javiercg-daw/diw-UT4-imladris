@@ -197,15 +197,15 @@ h1 {
 }
 
 
-/* Index */
+/* Index page */
 
 
-.main__container {
+.index__container {
     width: 100%;
     min-height: 100vh;
 }
 
-.main__text-primary {
+.index__text-primary {
     background-image: url("../img/rivendell.jpg");
     background-position: 20%;
     background-size: 100%;
@@ -226,11 +226,11 @@ h1 {
     box-sizing: border-box;
 }
 
-.main__text-primary {
+.index__text-primary {
     padding: 0 25%;
 }
 
-.main__text-secondary {
+.index__text-secondary {
     min-height: 24vh;
     font-family: Libre Baskerville, Baskerville, serif;
     font-style: normal;
@@ -241,11 +241,11 @@ h1 {
     display: flex;
 }
 
-.main__text-secondary > p {
+.index__text-secondary > p {
     max-width: 50%;
 }
 
-.main__buttons {
+.index__buttons {
     margin-left: 20px;
     width: 50%;
 
@@ -682,6 +682,10 @@ h1 {
     display: flex;
 }
 
+.list__film-section {
+    width: 100%;
+}
+
 .list__article {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -781,16 +785,19 @@ h1 {
         opacity: 100%;
         -webkit-filter: none;
         filter: none;
+        transform: scale(1, 1);
     }
     50% {
         opacity: 80%;
         -webkit-filter: drop-shadow(0px 0px 8px #FF7D29);
         filter: drop-shadow(0px 0px 8px #FF7D29);
+        transform: scale(1.005, 1.005);
     }
     100% {
         opacity: 100%;
         -webkit-filter: none;
-        filter: none
+        filter: none;
+        transform: scale(1, 1);
     }
 }
 
@@ -803,4 +810,107 @@ h1 {
     justify-content: center;
     align-items: center;
     color: var(--gold);
+}
+
+/* Tablet-specific styles */
+
+@media screen and (max-width: 992px) {
+    .header__navbar {
+        grid-column: 5/13;
+    }
+}
+
+
+/* Mobile-specific styles */
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+
+    .header__container {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 16px;
+    }
+
+    .header__navbar {
+        display: none;
+    }
+
+    h1 {
+        font-size: var(--text-xl);
+    }
+
+
+    /* Footer */
+
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        padding: 20px 16px;
+        margin: 0;
+    }
+
+    .footer__nav-list {
+        flex-direction: column;
+    }
+
+    .footer__nav-list a {
+        font-size: var(--text-l);
+    }
+
+    .footer__nav-list li {
+        padding: 10px;
+    }
+
+    .footer__brand {
+        font-size: var(--text-xl);
+        padding-bottom: 20px;
+    }
+
+
+    /* Index page */
+
+    .index__text-primary {
+        font-size: var(--text-xxl);
+        line-height: var(--text-xxl);
+        padding: 0 16px;
+        height: 50vh;
+        background-size: cover;
+    }
+
+    .index__text-secondary {
+        flex-direction: column;
+        padding: 20px 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .index__text-secondary p {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .index__buttons {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        margin: 0 16px;
+    }
+
+    .index__buttons .btn {
+        width: 50%;
+        margin: 0;
+    }
+
+    .index__buttons .btn:first-child {
+        margin-right: 10px;
+    }
+
+    .index__buttons .btn:last-child {
+        margin-left: 10px;
+    }
+
 }

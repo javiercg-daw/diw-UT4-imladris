@@ -1,6 +1,6 @@
 # diw-UT4-imladris
 
-To do:
+Done:
 - [x] Finish adding styles to character detail page
 - [x] Add styles to movie detail page
 - [x] Add quote names fetching to movie detail page
@@ -8,16 +8,35 @@ To do:
 - [x] Add book detail page with chapters
 - [x] Finish adding styles to home page
 - [x] Add 404 page
+
+CSS:
+- [ ] Add responsive media queries
+- [ ] Add dark mode to home page
+- [ ] Add "tabs" to nav bar, transitions
+- [ ] Add transition to buttons
+- [ ] Add inline styles, etc.
+- [ ] Substitute placeholder texts
+- [ ] Add empty list message in film/character quote sections
+- [ ] Justify changes (in readme file) 
+- [ ] Add some comments where needed
+- [ ] Validate CSS, etc.
+
+JS:
 - [ ] Review and apply criteria
 - [ ] Add error handling to fetch methods (redirect to 404 page)
-- [ ] Add empty list message in film/character quote sections
-- [ ] Add CSS animations
-- [ ] Add responsive media queries
 - [ ] Add image fetching
  
 Optional:
-- [ ] Add random fetching to home page?
+- [ ] Add random fetching to home page
 - [ ] Add pagination to character list
 - [ ] Add pagination to character detail quotes
 - [ ] Add pagination to film detail chapters
 - [ ] Add movie name and link to character quotes in character detail page and in homepage
+
+
+Changes from mockups:
+- Detail screen quotes/chapters set to fit text length
+- Mobile header navbar changed to hamburger menu
+- Pre-login page buttons
+- Header: keep website name in mobile
+- Footer: change layout to vertical list

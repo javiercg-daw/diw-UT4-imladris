@@ -40,3 +40,4 @@ Changes from mockups:
 - Pre-login page buttons
 - Header: keep website name in mobile
 - Footer: change layout to vertical list
+- Contact: image not scaled up

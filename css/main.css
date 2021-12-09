@@ -321,7 +321,6 @@ h1 {
 /* Contact */
 
 .contact__main {
-    /*height: 100%;*/
     margin: 20px 50px;
 
     display: grid;
@@ -363,6 +362,7 @@ h1 {
 .contact__text-1 {
     grid-row: 2/span 2;
     grid-column: 1/span 8;
+    font-size: var(--text-l);
 }
 
 .contact__text-2 {
@@ -826,7 +826,6 @@ h1 {
 @media screen and (max-width: 768px) {
 
     /* Header */
-
     .header__container {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 16px;
@@ -842,7 +841,6 @@ h1 {
 
 
     /* Footer */
-
     .footer__container {
         display: flex;
         flex-direction: column;
@@ -871,7 +869,6 @@ h1 {
 
 
     /* Index page */
-
     .index__text-primary {
         font-size: var(--text-xxl);
         line-height: var(--text-xxl);
@@ -911,6 +908,79 @@ h1 {
 
     .index__buttons .btn:last-child {
         margin-left: 10px;
+    }
+
+
+    /* Contact */
+    .contact__main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, minmax(12.5vh, min-content));
+        margin: 20px 0;
+    }
+
+    .contact__title {
+        grid-column: 1/span 4;
+    }
+
+    .contact__image {
+        grid-column: 1/span 4;
+        grid-row: 2/span 2;
+        width: 100%;
+        border-radius: 0;
+        object-fit: cover;
+    }
+
+    .contact__text {
+        font-size: var(--text-l);
+        margin: 0 16px;
+    }
+
+    .contact__text-1 {
+        grid-column: 1/span 4;
+        grid-row: 2/span 2;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: 100%;
+        text-align: center;
+        font-size: var(--text-xl);
+
+        background: none;
+        color: var(--white);
+        text-shadow: -1px -1px 0 var(--black),
+        1px -1px 0 var(--black),
+        -1px 1px 0 var(--black),
+        1px 1px 0 var(--black);
+    }
+
+    .contact__text-2 {
+        grid-column: 1/span 4;
+        grid-row: 4/span 2;
+    }
+
+    .contact__text-3 {
+        grid-column: 1/span 4;
+        grid-row: 6;
+    }
+
+    .contact__text-3 p {
+        font-size: var(--text-m);
+    }
+
+
+    /* Register & login */
+
+    .register__main {
+        margin: 20px 16px;
+    }
+
+    .register__field-label {
+        padding: 0 0 25px;
+    }
+
+    .register__footer {
+        max-width: 100%;
     }
 
 }

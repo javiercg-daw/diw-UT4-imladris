@@ -3,9 +3,9 @@ import {fetchResponseBody} from "./service.js";
 const ITEM_TEMPLATE = (item, url) => `
     <article class="list__article">
         <p class="list__article-title" >${item.name}</p>
-        <img src="./img/fellowship.jpg" alt="The Lord of the Rings: The Fellowship of the Ring Poster"/>
-        <div class="list__article-img-gradient"></div>
-        <a class="list__article-link" href="${url}?id=${item._id}"></a>
+        <img class="list__image" src="./img/fellowship.jpg" alt="The Lord of the Rings: The Fellowship of the Ring Poster"/>
+        <div class="list__image-gradient"></div>
+        <a class="list__link" href="${url}?id=${item._id}"></a>
     </article>
 `;
 

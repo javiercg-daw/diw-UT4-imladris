@@ -3,33 +3,33 @@ import {fetchAndRenderItem, fetchAndRenderList} from "./service.js";
 const ID = new URLSearchParams(window.location.search).get('id');
 
 const CHARACTER_URL = `/character/${ID}`;
-const CHARACTER_CONTAINER_SELECTOR = '.detail__main';
+const CHARACTER_CONTAINER_SELECTOR = '.detail';
 const CHARACTER_TEMPLATE = data => `
-    <section class="detail__data bg-blue-dark text-blue-light">
-        <div class="detail__img-container">
-            <img class="detail__img"
+    <section class="data bg-blue-dark text-blue-light">
+        <div class="detail__image-container">
+            <img class="detail__image"
                  src="./img/character-blank.png" alt="${data.name}"/>
         </div>
-        <div class="detail__data-text">
-            <h2 class="detail__data-title">${data.name}</h2>
+        <div class="data-text">
+            <h2 class="data__title">${data.name}</h2>
             <ul>
-                <li><span>Race:</span> ${data.race}</li>
-                <li><span>Gender:</span> ${data.gender}</li>
-                <li><span>Birth:</span> ${data.birth}</li>
-                <li><span>Death:</span> ${data.death}</li>
-                <li><span>Realm:</span> ${data.realm}</li>
-                <li><span>Spouse:</span> ${data.spouse}</li>
-                <li><span>Hair:</span> ${data.hair}</li>
-                <li><span>Height:</span> ${data.height}</li>
+                <li class="data__list-element"><span>Race:</span> ${data.race}</li>
+                <li class="data__list-element"><span>Gender:</span> ${data.gender}</li>
+                <li class="data__list-element"><span>Birth:</span> ${data.birth}</li>
+                <li class="data__list-element"><span>Death:</span> ${data.death}</li>
+                <li class="data__list-element"><span>Realm:</span> ${data.realm}</li>
+                <li class="data__list-element"><span>Spouse:</span> ${data.spouse}</li>
+                <li class="data__list-element"><span>Hair:</span> ${data.hair}</li>
+                <li class="data__list-element"><span>Height:</span> ${data.height}</li>
             </ul>
         </div>
     </section>
 `;
 
 const QUOTES_URL = `/character/${ID}/quote`;
-const QUOTES_CONTAINER_SELECTOR = '.detail__items';
+const QUOTES_CONTAINER_SELECTOR = '.items';
 const QUOTES_TEMPLATE = data => `
-    <article class="detail__item detail__quote">
+    <article class="items__item detail__quote">
         <p class="quote-text">${data.dialog}</p>
     </article>
 `

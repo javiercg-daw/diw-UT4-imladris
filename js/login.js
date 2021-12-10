@@ -14,19 +14,19 @@ const registerHTMLMain = `
         <form action="" method="post" data-action="register">
             <fieldset class="register__fieldset">
                 <p class="register__field-validation"></p>         
-                <label class="register__field-label"
+                <label class="register__label"
                        for="email">
                     Email
                     <input class="register__field"
                            type="email" name="email" id="email" required/>            
                 </label>
-                <label class="register__field-label"
+                <label class="register__label"
                        for="password">
                     Password
                     <input class="register__field"
                            type="password" name="password" id="password"/>                  
                 </label>
-                <label class="register__field-label"
+                <label class="register__label"
                        for="password-confirm">
                     Confirm password
                     <input class="register__field"
@@ -44,11 +44,11 @@ const registerHTMLMain = `
         <footer class="register__footer">
             <p class="text-align-center">
                 By clicking "Sign Up", you confirm that you have read and accept our
-                <a href="">terms of service</a> and our <a href="">privacy policy</a>.
+                <a class="text-underline" href="">terms of service</a> and our <a class="text-underline" href="">privacy policy</a>.
             </p>
             <button
                     id="register-login-toggle"
-                    class="register__form-toggle text-align-center"
+                    class="register__toggle text-align-center"
                     data-action="login"
                     type="button">
                 Log In
@@ -63,13 +63,13 @@ const loginHTMLMain = `
         <form action="" method="post" data-action="login">
             <fieldset class="register__fieldset">
                 <p class="register__field-validation"></p>            
-                <label class="register__field-label"
+                <label class="register__label"
                        for="email">
                     Email
                     <input class="register__field"
                            type="email" name="email" id="email" required/>
                 </label>
-                <label class="register__field-label"
+                <label class="register__label"
                        for="password">
                     Password
                     <input class="register__field"
@@ -81,11 +81,11 @@ const loginHTMLMain = `
         </form>
 
         <footer class="register__footer">
-            <a class="text-align-center"
+            <a class="text-align-center text-underline"
                href="">Forgot your password?</a>
             <button
                     id="register-login-toggle"
-                    class="register__form-toggle text-align-center"
+                    class="register__toggle text-align-center"
                     data-action="register"
                     type="button">
                 Sign Up

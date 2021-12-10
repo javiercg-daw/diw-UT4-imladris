@@ -3,22 +3,22 @@ import {fetchAndRenderItem, fetchResponseBody} from "./service.js";
 const ID = new URLSearchParams(window.location.search).get('id');
 
 const FILM_URL = `/movie/${ID}`;
-const FILM_CONTAINER_SELECTOR = '.detail__main';
+const FILM_CONTAINER_SELECTOR = '.detail';
 const FILM_TEMPLATE = data => `
-    <section class="detail__data bg-blue-dark text-blue-light">
-        <div class="detail__img-container">
-            <img class="detail__img"
+    <section class="data bg-blue-dark text-blue-light">
+        <div class="detail__image-container">
+            <img class="detail__image"
                  src="./img/fellowship.jpg" alt="${data.name}"/>
         </div>
-        <div class="detail__data-text">
-            <h2 class="detail__data-title">${data.name}</h2>
+        <div class="data-text">
+            <h2 class="data__title">${data.name}</h2>
             <ul>
-                <li><span>Runtime:</span> ${data.runtimeInMinutes} min</li>
-                <li><span>Budget:</span> $${data.budgetInMillions}.000.000</li>
-                <li><span>Box Office Revenue:</span> $${data.boxOfficeRevenueInMillions}.000.000</li>
-                <li><span>Academy Award Nominations:</span> ${data.academyAwardNominations}</li>
-                <li><span>Academy Award Wins:</span> ${data.academyAwardWins}</li>
-                <li><span>Rotten Tomatoes Score:</span> ${data.rottenTomatoesScore}%</li>
+                <li class="data__list-element"><span>Runtime:</span> ${data.runtimeInMinutes} min</li>
+                <li class="data__list-element"><span>Budget:</span> $${data.budgetInMillions}.000.000</li>
+                <li class="data__list-element"><span>Box Office Revenue:</span> $${data.boxOfficeRevenueInMillions}.000.000</li>
+                <li class="data__list-element"><span>Academy Award Nominations:</span> ${data.academyAwardNominations}</li>
+                <li class="data__list-element"><span>Academy Award Wins:</span> ${data.academyAwardWins}</li>
+                <li class="data__list-element"><span>Rotten Tomatoes Score:</span> ${data.rottenTomatoesScore}%</li>
             </ul>
         </div>
     </section>
@@ -26,11 +26,11 @@ const FILM_TEMPLATE = data => `
 
 const QUOTES_URL = `/movie/${ID}/quote`;
 const CHARACTERS_URL = '/character';
-const QUOTES_CONTAINER_SELECTOR = '.detail__items';
+const QUOTES_CONTAINER_SELECTOR = '.items';
 const QUOTE_TEMPLATE = data => `
-    <article class="detail__item">
+    <article class="items__item">
         <p class="quote-text">${data.dialog}</p>
-        <p class="quote-character detail__quote-character">${data.character.name}</p>
+        <p class="quote-character items__quote-character">${data.character.name}</p>
     </article>
 `
 

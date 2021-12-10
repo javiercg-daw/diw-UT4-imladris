@@ -3,25 +3,23 @@ import {fetchAndRenderItem, fetchAndRenderList} from "./service.js";
 const ID = new URLSearchParams(window.location.search).get('id');
 
 const BOOK_URL = `/book/${ID}`;
-const BOOK_CONTAINER_SELECTOR = '.detail__main';
+const BOOK_CONTAINER_SELECTOR = '.detail';
 const BOOK_TEMPLATE = data => `
-    <section class="detail__data bg-blue-dark text-blue-light">
-        <div class="detail__img-container">
-            <img class="detail__img"
+    <section class="data bg-blue-dark text-blue-light">
+        <div class="detail__image-container">
+            <img class="detail__image"
                  src="./img/fellowship.jpg" alt="${data.name}"/>
         </div>
-        <div class="detail__data-text">
-            <h2 class="detail__data-title">${data.name}</h2>
+        <div class="data-text">
+            <h2 class="data__title">${data.name}</h2>
         </div>
     </section>
 `;
 
 const CHAPTERS_URL = `/book/${ID}/chapter`;
-const CHAPTERS_CONTAINER_SELECTOR = '.detail__items';
+const CHAPTERS_CONTAINER_SELECTOR = '.items';
 const CHAPTERS_TEMPLATE = data => `
-    <li class="detail__item detail__quote">
-        <p class="quote-text">${data.chapterName}</p>
-    </li>
+    <li class="items__ordered-item">${data.chapterName}</li>
 `
 
 document.addEventListener('DOMContentLoaded', async () => {

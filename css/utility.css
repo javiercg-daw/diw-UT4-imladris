@@ -26,6 +26,15 @@
     --text-m: 1rem;
 }
 
+/* Alternative text sizes for small-screen devices */
+@media screen and (max-width: 320px) {
+    :root {
+        --text-xxl: 2.4rem;
+        --text-xl: 1.6rem;
+        --text-l: 1.2rem;
+        --text-m: 0.8rem;
+    }
+}
 
 /* Dark mode variables */
 :root[data-theme='dark'] {
@@ -140,7 +149,7 @@
 
 /* Component classes */
 .btn {
-    font-family: First Order Plain, fantasy;
+    font-family: "First Order Plain", fantasy;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

@@ -19,7 +19,7 @@ const BOOK_TEMPLATE = data => `
 const CHAPTERS_URL = `/book/${ID}/chapter`;
 const CHAPTERS_CONTAINER_SELECTOR = '.items';
 const CHAPTERS_TEMPLATE = data => `
-    <li class="items__ordered-item">${data.chapterName}</li>
+    <li class="items__item items__ordered-item">${data.chapterName}</li>
 `
 
 document.addEventListener('DOMContentLoaded', async () => {

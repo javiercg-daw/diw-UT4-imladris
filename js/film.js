@@ -39,8 +39,11 @@ Fetches the quotes from the film and renders them with the name of the character
 fetched at once to make the minimum possible number of calls.
  */
 const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector) {
-    const characterData = (await fetchResponseBody(characterUrl)).docs;
-    const quoteData = (await fetchResponseBody(quoteUrl)).docs;
+    let [characterData, quoteData] = await Promise.all([
+            fetchResponseBody(characterUrl).then(data => data.docs),
+            fetchResponseBody(quoteUrl).then(data => data.docs)
+        ]
+    )
     const container = document.querySelector(containerSelector);
 
     // In case there are no quotes, add a message to the container and return.
@@ -62,6 +65,8 @@ const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fetchAndRenderItem(FILM_URL, FILM_TEMPLATE, FILM_CONTAINER_SELECTOR);
-    await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR);
+    await Promise.all([
+        await fetchAndRenderItem(FILM_URL, FILM_TEMPLATE, FILM_CONTAINER_SELECTOR),
+        await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR),
+    ])
 });

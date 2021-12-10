@@ -13,8 +13,11 @@ const ITEM_TEMPLATE = (item, url) => `
 Fetches all books and films from the API, then renders them in their respective containers.
  */
 const fetchAndRenderFilmsAndBooks = async function () {
-    const filmsData = (await fetchResponseBody('/movie')).docs;
-    const booksData = (await fetchResponseBody('/book')).docs;
+    let [filmsData, booksData] = await Promise.all([
+            fetchResponseBody('/movie').then(data => data.docs),
+            fetchResponseBody('/book').then(data => data.docs)
+        ]
+    )
 
     // Film data includes both LOTR and Hobbit films in no particular order, so we need to separate and sort them
     const lotrFilms = filmsData.filter(f =>

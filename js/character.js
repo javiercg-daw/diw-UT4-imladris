@@ -8,7 +8,7 @@ const CHARACTER_TEMPLATE = data => `
     <section class="data bg-blue-dark text-blue-light">
         <div class="detail__image-container">
             <img class="detail__image"
-                 src="${data.imageUrl ?? './img/character-blank.png'}" alt="${data.name}"/>
+                 src="./img/character-blank.png" alt="${data.name}"/>
         </div>
         <div class="data-text">
             <h2 class="data__title">${data.name}</h2>
@@ -35,7 +35,10 @@ const QUOTES_TEMPLATE = data => `
 `
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR, true);
-    await fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR,
-        'This character has no recorded quotes');
+    await Promise.all([
+        fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR, true),
+        fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR,
+            'This character has no recorded quotes')
+
+    ])
 });

@@ -28,9 +28,38 @@ export const fetchResponseBody = async url => {
 }
 
 /*
+Fetches image URL from the wiki URL provided by the API, then sets it as the HTML src attribute for the element
+specified by the selector. (The API does not provide image URLs or data for its resources.)
+ */
+const fetchImageFromWikiUrl = async function (url, imgElementSelector = '.detail__image') {
+    try {
+        // The request is sent through a CORS proxy to add the Access-Control-Allow-Origin header to the response
+        const wikiResponse = await fetch(new Request(
+                `https://guarded-sands-92210.herokuapp.com/${url}`),
+            {
+                method: 'GET',
+                mode: 'cors',
+                headers: new Headers({
+                    'Accept': 'text/html',
+                }),
+                cache: 'default'
+            }
+        );
+        const wikiDocument = new DOMParser().parseFromString(await wikiResponse.text(), "text/html");
+        const image = wikiDocument.querySelector('.pi-image-thumbnail');
+        if (image) {
+            // Before being set as the element's src, the image URL is split to remove unnecessary parts
+            document.querySelector(imgElementSelector).src = image.src.split('/revision/')[0];
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+/*
 Fetches a single resource from an URL, then inserts the HTML template with the resource's data in the specified
 container. Used in character, film and book detail pages. Provides an option to fetch the resource's image URL from the
-wiki and append it to the data object (currently only used in the character detail page).
+wiki (currently only used in the character detail page).
  */
 export const fetchAndRenderItem = async function (url, template, containerSelector, fetchImage = false) {
     const data = (await fetchResponseBody(url)).docs[0];
@@ -43,34 +72,12 @@ export const fetchAndRenderItem = async function (url, template, containerSelect
         }
     })
 
-    if (fetchImage && data.wikiUrl) {
-        // Due to the API not providing images, we must obtain images from the wiki URL it provides
-        // The request is sent through a CORS proxy to add the Access-Control-Allow-Origin header to the response
-        try {
-            const wikiResponse = await fetch(new Request(
-                    `https://guarded-sands-92210.herokuapp.com/${data.wikiUrl}`),
-                {
-                    method: 'GET',
-                    mode: 'cors',
-                    headers: new Headers({
-                        'Accept': 'text/html',
-                    }),
-                    cache: 'default'
-                }
-            );
-            const wikiDocument = new DOMParser().parseFromString(await wikiResponse.text(), "text/html");
-            const image = wikiDocument.querySelector('.pi-image-thumbnail');
-            if (image) {
-                // Image src URL is split to remove unnecessary parts
-                data.imageUrl = image.src.split('/revision/')[0];
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
     document.title = `${data.name} - Imladris`;
     container.insertAdjacentHTML('afterbegin', template(data));
+
+    if (fetchImage && data.wikiUrl) {
+        await fetchImageFromWikiUrl(data.wikiUrl);
+    }
 }
 
 /*

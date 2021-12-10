@@ -23,6 +23,8 @@ const CHAPTERS_TEMPLATE = data => `
 `
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fetchAndRenderItem(BOOK_URL, BOOK_TEMPLATE, BOOK_CONTAINER_SELECTOR);
-    await fetchAndRenderList(CHAPTERS_URL, CHAPTERS_TEMPLATE, CHAPTERS_CONTAINER_SELECTOR);
+    await Promise.all([
+        fetchAndRenderItem(BOOK_URL, BOOK_TEMPLATE, BOOK_CONTAINER_SELECTOR),
+        fetchAndRenderList(CHAPTERS_URL, CHAPTERS_TEMPLATE, CHAPTERS_CONTAINER_SELECTOR)
+    ])
 });

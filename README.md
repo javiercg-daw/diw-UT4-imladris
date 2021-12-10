@@ -10,7 +10,8 @@ Cambios respecto del prototipo:
 
 - General: pequeños cambios en tamaños de fuente, alineación de texto, etc. Motivo: mejorar la navegación a través de
   una mejor jerarquía visual, de una mejor distribución del texto, etc.
-- General: cambio de la fuente First Order Light por First Order. Motivo: la primera está desactualizada y no se visualiza correctamente, sobre todo en pantallas de tamaño reducido. 
+- General: cambio de la fuente First Order Light por First Order. Motivo: la primera está desactualizada y no se
+  visualiza correctamente, sobre todo en pantallas de tamaño reducido.
 - Detalle de personaje (desktop): *layout* de la parte derecha cambiado de mosaico a columna vertical (tipo F). Motivo:
   mejorar la legibilidad del texto, lograr una mejor distribución visual en casos en los que haya pocos elementos.
 - Páginas de detalle (desktop): los elementos de la parte derecha se ajustan al ancho del texto. Motivo: no dejar tanto
@@ -50,14 +51,6 @@ CSS:
 JS:
 
 - [x] Add regex validation to register/login (add a field or two to register)
-- [ ] Add error handling to fetch methods (redirect to 404 page)
-- [ ] Document code (especially functions), emphasis on pointing to requirements
-- [ ] Add image fetching
-
-Optional:
-
-- [ ] Add random fetching to home page
-- [ ] Add pagination to character list
-- [ ] Add pagination to character detail quotes
-- [ ] Add pagination to film detail chapters
-- [ ] Add movie name and link to character quotes in character detail page and in homepage
+- [x] Add error handling to fetch methods (redirect to 404 page)
+- [x] Add image fetching
+- [x] Document code

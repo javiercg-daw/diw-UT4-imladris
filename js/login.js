@@ -97,6 +97,10 @@ const loginHTMLMain = `
     </main>
 `
 
+/*
+Dynamically inserts HTML code for the register or login form based on the specified condition, then registers the
+required event listeners.
+ */
 const insertHTML = function (isRegister) {
     const header = document.querySelector('header');
 
@@ -112,6 +116,9 @@ const insertHTML = function (isRegister) {
     form.addEventListener('submit', validateForm);
 }
 
+/*
+Handler function to toggle between login and register forms.
+ */
 const toggleHandler = function () {
     this.removeEventListener('click', toggleHandler);
     const isRegister = this.dataset.action === 'register';
@@ -120,6 +127,11 @@ const toggleHandler = function () {
     insertHTML(isRegister);
 }
 
+/*
+Validates form according to the form data-action. Redirects to home page if the form is valid, else inserts the
+appropriate error messages. Registered users are not saved, as there is no backend. Also, login data is checked against
+the mockUsers object.
+ */
 const validateForm = function (event) {
     event.preventDefault();
     const data = new FormData(this);
@@ -129,11 +141,13 @@ const validateForm = function (event) {
     validationMessageList.innerHTML = "";
 
     if (this.dataset.action === 'register') {
+        // Check that the values entered in the password and confirm password fields are identical, then check whether
+        // the password is at least six characters long.
         let isValid = true;
         const confirmPassword = data.get('password-confirm');
         if (!(confirmPassword === password)) {
             isValid = false;
-            validationMessageList.insertAdjacentHTML('afterbegin', '<li>Passwords don\'t match</li>')
+            validationMessageList.insertAdjacentHTML('afterbegin', '<li>Passwords don\'t match.</li>')
         }
         if (!(password.length >= 6)) {
             isValid = false;
@@ -141,6 +155,8 @@ const validateForm = function (event) {
                 'characters long.</li>')
         }
 
+        // Check that the username it at least five characters long, starts with a letter and only contains numbers,
+        // letters, hyphens and underscores.
         const username = data.get('username');
         const regex = /^[a-z][a-z0-9_-]{4,}$/i;
         if (!regex.test(username)) {
@@ -154,8 +170,14 @@ const validateForm = function (event) {
         }
 
     } else if (this.dataset.action === 'login') {
+        // Check that the email and password combination entered is in the mockUsers object, else return a validation
+        // error message
         if (!(mockUsers.find(u => u.email === email && u.password === password))) {
-            validationMessageList.insertAdjacentHTML('afterbegin', '<li>Incorrect user and/or password</li>');
+            validationMessageList.insertAdjacentHTML(
+                'afterbegin',
+                '<li>Incorrect user and/or password (hint: registered users are not saved, so the only ' +
+                'combination that works is user@user.com:password).</li>');
+            return;
         }
         window.location.replace('./home.html');
     }

@@ -1,3 +1,6 @@
+/*
+Handler function to toggle between light and dark mode. The corresponding style sheets are stored in /css/utility.css.
+ */
 function toggleDarkMode(event) {
     if (event.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');

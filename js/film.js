@@ -34,16 +34,17 @@ const QUOTE_TEMPLATE = data => `
     </article>
 `
 
+/*
+Fetches the quotes from the film and renders them with the name of the characters that said them. All characters are
+fetched at once to make the minimum possible number of calls.
+ */
 const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector) {
-    const quoteData = (await fetchResponseBody(quoteUrl)).docs;
     const characterData = (await fetchResponseBody(characterUrl)).docs;
-
+    const quoteData = (await fetchResponseBody(quoteUrl)).docs;
     const container = document.querySelector(containerSelector);
 
+    // In case there are no quotes, add a message to the container and return.
     if (!quoteData.length) {
-        /*
-        In case there are no quotes, add a message to the container and return.
-        */
         container.insertAdjacentHTML('beforeend',
             `<p class="items__no-items">This film has no recorded quotes</p>`);
         return;
@@ -54,7 +55,6 @@ const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl
             if (character.name === 'MINOR_CHARACTER') {
                 character.name = "Minor character"
             }
-
             item.character = character;
             container.insertAdjacentHTML('beforeend', template(item));
         }

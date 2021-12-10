@@ -9,7 +9,9 @@ const ITEM_TEMPLATE = (item, url) => `
     </article>
 `;
 
-
+/*
+Fetches all books and films from the API, then renders them in their respective containers.
+ */
 const fetchAndRenderFilmsAndBooks = async function () {
     const filmsData = (await fetchResponseBody('/movie')).docs;
     const booksData = (await fetchResponseBody('/book')).docs;

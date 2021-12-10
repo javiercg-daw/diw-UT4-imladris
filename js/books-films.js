@@ -23,11 +23,11 @@ const fetchAndRenderFilmsAndBooks = async function () {
     ).sort((a, b) => b.boxOfficeRevenueInMillions - a.boxOfficeRevenueInMillions);
 
     const booksContainer = document.querySelector('#books');
-    booksData.forEach(item => booksContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, '/book.html')));
+    booksData.forEach(item => booksContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, './book.html')));
     const lotrContainer = document.querySelector('#lotr-films');
-    lotrFilms.forEach(item => lotrContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, '/film.html')));
+    lotrFilms.forEach(item => lotrContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, './film.html')));
     const hobbitContainer = document.querySelector('#hobbit-films');
-    hobbitFilms.forEach(item => hobbitContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, '/film.html')));
+    hobbitFilms.forEach(item => hobbitContainer.insertAdjacentHTML('beforeend', ITEM_TEMPLATE(item, './film.html')));
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

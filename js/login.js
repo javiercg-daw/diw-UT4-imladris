@@ -78,7 +78,7 @@ const loginHTMLMain = `
                     <input class="register__field"
                            type="password" name="password" id="password"/>
                 </label>
-                <ul class="register__field-validation"></ul
+                <ul class="register__field-validation"></ul>
                 <button class="register__btn btn btn-light" type="submit">Log In</button>
             </fieldset>
         </form>

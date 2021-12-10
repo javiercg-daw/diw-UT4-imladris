@@ -175,6 +175,10 @@
     transition: filter 0.1s ease, transform 0.1s ease;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn-dark {
     filter: drop-shadow(0px 4px 0px var(--dark-secondary));
     background-color: var(--dark-primary);

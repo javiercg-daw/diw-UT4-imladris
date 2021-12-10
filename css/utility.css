@@ -2,12 +2,10 @@
     background-color: var(--dark-primary);
 }
 
-/* Constants */
-
+/* Variables */
 :root {
 
     /* Colors */
-
     --dark-primary: #1b5f34;
     --medium-primary: #b0d2bf;
     --light-primary: #c7f9cc;
@@ -18,22 +16,18 @@
     --white: #f7f7f7;
     --black: #141414;
 
-    /* Index page text color --to allow further customization of dark mode */
-
+    /* Index page text color --allows further customization of dark mode */
     --index-secondary-text: #1b5f34;
 
     /* Text sizes */
-
     --text-xxl: 3rem;
     --text-xl: 2rem;
     --text-l: 1.5rem;
     --text-m: 1rem;
-
 }
 
 
-/* Dark mode */
-
+/* Dark mode variables */
 :root[data-theme='dark'] {
     --dark-primary: #1b445f;
     --medium-primary: #4d7a96;
@@ -46,7 +40,6 @@
 
 
 /* Color classes */
-
 .bg-green-medium {
     background-color: var(--medium-primary);
 }
@@ -117,7 +110,6 @@
 
 
 /* Text-related classes */
-
 .text-xxl {
     font-size: var(--text-xxl);
 }
@@ -142,8 +134,11 @@
     font-style: italic;
 }
 
-/* Component classes */
+.text-underline {
+    text-decoration: underline;
+}
 
+/* Component classes */
 .btn {
     font-family: First Order Plain, fantasy;
     font-style: normal;
@@ -189,15 +184,4 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-
-.text-underline {
-    text-decoration: underline;
-}
-
-/* Mobile-specific styles */
-
-@media screen and (max-width: 768px) {
-
 }

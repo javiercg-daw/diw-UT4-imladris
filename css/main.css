@@ -60,9 +60,10 @@ table {
 /* Main */
 * {
     text-decoration: none;
-    font-family: Libre Baskerville, Baskerville, serif;
+    font-family: "Libre Baskerville", Baskerville, serif;
     font-style: normal;
     font-weight: normal;
+    line-height: 1.2;
 }
 
 html {
@@ -120,7 +121,7 @@ a {
 }
 
 h1 {
-    font-family: First Order Light, fantasy;
+    font-family: "First Order Light", fantasy;
     font-style: normal;
     font-weight: 300;
     font-size: var(--text-xxl);
@@ -160,7 +161,7 @@ h1 {
 
 .navbar__link {
     text-decoration: none;
-    font-family: First Order Plain, fantasy;
+    font-family: "First Order Plain", fantasy;
     font-style: normal;
     font-weight: normal;
     line-height: 21px;
@@ -210,7 +211,7 @@ h1 {
     grid-column: 1 / span 2;
     margin: auto auto;
 
-    font-family: First Order Light, fantasy;
+    font-family: "First Order Light", fantasy;
     font-style: normal;
     font-weight: normal;
     font-size: var(--text-l);
@@ -231,7 +232,7 @@ h1 {
 .footer__link {
     color: var(--light-secondary);
     text-decoration: none;
-    font-family: Libre Baskerville, Baskerville, serif;
+    font-family: "Libre Baskerville", Baskerville, serif;
     font-style: normal;
     font-weight: normal;
     font-size: var(--text-m);
@@ -254,7 +255,7 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    font-family: Libre Baskerville, Baskerville, serif;
+    font-family: "Libre Baskerville", Baskerville, serif;
     font-style: normal;
     font-weight: normal;
     font-size: var(--text-xxl);
@@ -267,7 +268,7 @@ h1 {
 
 .index__section-2 {
     min-height: 24vh;
-    font-family: Libre Baskerville, Baskerville, serif;
+    font-family: "Libre Baskerville", Baskerville, serif;
     font-style: normal;
     font-weight: normal;
     font-size: var(--text-l);
@@ -436,6 +437,7 @@ h1 {
     z-index: 2;
     grid-column: 1 /span 2;
     grid-row: 1;
+    display: none;
 }
 
 
@@ -445,9 +447,18 @@ h1 {
     justify-content: space-between;
 
     color: var(--light-primary);
-    padding: 20px;
     width: 100%;
+    padding: 20px;
     box-sizing: border-box;
+}
+
+.article-primary__image {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .qotd {
@@ -458,11 +469,6 @@ h1 {
 .qotd__image {
     grid-column: 2;
     grid-row: 1;
-
-    height: 100%;
-    max-width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
 }
 
 .qotd__gradient {
@@ -515,11 +521,6 @@ h1 {
 .highlight__image {
     grid-column: 1;
     grid-row: 1;
-
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
 }
 
 .highlight__gradient {
@@ -607,19 +608,19 @@ h1 {
 }
 
 .detail__image-container {
-    height: 20rem;
     width: 100%;
     display: flex;
     justify-content: center;
-    clip-path: circle(40% at center);
 }
 
 .detail__image {
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
-    object-position: 0 0;
+    object-position: center 0;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
 .items {
@@ -1136,8 +1137,12 @@ h1 {
         grid-template-rows: minmax(28vh, min-content);
     }
 
+    .article-primary__title {
+        font-size: var(--text-m);
+    }
 
-    /* Character/film detail */
+
+        /* Character/film detail */
     .detail {
         margin: 0;
         padding: 20px 0;

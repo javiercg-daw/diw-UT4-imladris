@@ -45,7 +45,7 @@ CSS:
 - [x] Justify changes (in readme file)
 - [x] Add some comments where needed
 - [x] Fix character/film detail image
-- [ ] Validate CSS, hand in assignment
+- [ ] Validate CSS (https://jigsaw.w3.org/css-validator), hand in assignment
 
 JS:
 

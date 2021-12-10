@@ -1,4 +1,4 @@
-import {API_URI, TOKEN} from "./secret.js";
+import {API_URI, TOKEN} from "./env.js";
 
 export const fetchResponseBody = async url => {
     const response = await fetch(

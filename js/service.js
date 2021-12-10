@@ -18,13 +18,13 @@ export const fetchResponseBody = async url => {
             });
 
         if (response.status !== 200) {
-            document.location.replace('./404.html');
+            document.location.replace(`./404.html?statusCode=${encodeURIComponent(response.status)}
+            &errorMessage=${encodeURIComponent(response.statusText)}`);
             return;
         }
         return await response.json();
     } catch (error) {
-        document.location.replace('./404.html');
-        console.error(error);
+        document.location.replace(`./404.html?errorMessage=${encodeURIComponent(error.message)}`);
     }
 }
 

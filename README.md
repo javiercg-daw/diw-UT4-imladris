@@ -6,7 +6,17 @@
 
 ---
 
-Cambios respecto del prototipo:
+# GitHub
+
+- Repositorio: https://github.com/javiercg-daw/diw-UT4-imladris
+- GitHub Pages: https://javiercg-daw.github.io/diw-UT4-imladris/
+
+# Despliegue de la aplicación
+
+Desplegar como una página HTML normal (por ejemplo, abriendo el directorio de la aplicación con el plugin Live Server de
+VS Code, o copiando el contenido a un servidor Apache).
+
+# Cambios respecto del prototipo:
 
 - General: pequeños cambios en tamaños de fuente, alineación de texto, etc. Motivo: mejorar la navegación a través de
   una mejor jerarquía visual, de una mejor distribución del texto, etc.
@@ -32,25 +42,3 @@ Cambios respecto del prototipo:
   mayor consistencia.
 - Lista de películas/libros (mobile): eliminado zigzag en disposición de las imágenes. Motivo: simplificar la navegación
   por la página.
-
-CSS:
-
-- [x] Add responsive media queries
-- [x] Add hamburger menu to mobile header
-- [x] Add dark mode to home page
-- [x] Add "tabs" to nav bar, transitions
-- [x] Add transition to buttons
-- [x] Add inline styles, etc.
-- [x] Substitute placeholder texts
-- [x] Add empty list message in film/character quote sections
-- [x] Justify changes (in readme file)
-- [x] Add some comments where needed
-- [x] Fix character/film detail image
-- [ ] Validate CSS (https://jigsaw.w3.org/css-validator), hand in assignment
-
-JS:
-
-- [x] Add regex validation to register/login (add a field or two to register)
-- [x] Add error handling to fetch methods (redirect to 404 page)
-- [x] Add image fetching
-- [x] Document code

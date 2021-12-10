@@ -62,18 +62,18 @@ table {
 /* License: /fonts/Libre_Baskerville/OFL.txt */
 @font-face {
     font-family: "Libre Baskerville";
-    src: url("/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Libre Baskerville";
-    src: url("/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Libre Baskerville";
-    src: url("/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
+    src: url("../fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf") format("truetype");
     font-style: italic;
 }
 
@@ -81,12 +81,12 @@ table {
 /* License: /fonts/First_Order/firstorder.txt */
 @font-face {
     font-family: "First Order";
-    src: url("/fonts/First_Order/firstorder.otf") format("opentype");
+    src: url("../fonts/First_Order/firstorder.otf") format("opentype");
 }
 
 @font-face {
     font-family: "First Order Plain";
-    src: url("/fonts/First_Order/firstorderplain.otf") format("opentype");
+    src: url("../fonts/First_Order/firstorderplain.otf") format("opentype");
 }
 
 /* Main */
@@ -819,7 +819,7 @@ h1 {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    mask: url('/img/logo.svg');
+    mask: url('../img/logo.svg');
 }
 
 .not-found__main-animation-bg {

@@ -24,6 +24,7 @@ export const fetchResponseBody = async url => {
         return await response.json();
     } catch (error) {
         document.location.replace('./404.html');
+        console.error(error);
     }
 }
 

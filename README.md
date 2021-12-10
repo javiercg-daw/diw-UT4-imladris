@@ -49,9 +49,7 @@ CSS:
 
 JS:
 
-- [ ] Add regex validation to register/login (add a field or two to register)
-- [ ] Add closeable popup on register/login page disclaimer
-- [ ] Add JS validation to fields which are already validated by HTML
+- [x] Add regex validation to register/login (add a field or two to register)
 - [ ] Add error handling to fetch methods (redirect to 404 page)
 - [ ] Document code (especially functions), emphasis on pointing to requirements
 - [ ] Add image fetching

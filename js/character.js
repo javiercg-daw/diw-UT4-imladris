@@ -1,6 +1,6 @@
-import {fetchAndRenderItem, fetchAndRenderList} from "./service.js";
+import {fetchAndRenderItem, fetchAndRenderList, getIdOr404} from "./service.js";
 
-const ID = new URLSearchParams(window.location.search).get('id');
+const ID = getIdOr404();
 
 const CHARACTER_URL = `/character/${ID}`;
 const CHARACTER_CONTAINER_SELECTOR = '.detail';
@@ -36,5 +36,6 @@ const QUOTES_TEMPLATE = data => `
 
 document.addEventListener('DOMContentLoaded', async () => {
     await fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR);
-    await fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR, true);
+    await fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR,
+        'This character has no recorded quotes');
 });

@@ -1,6 +1,6 @@
-import {fetchAndRenderItem, fetchResponseBody} from "./service.js";
+import {fetchAndRenderItem, fetchResponseBody, getIdOr404} from "./service.js";
 
-const ID = new URLSearchParams(window.location.search).get('id');
+const ID = getIdOr404();
 
 const FILM_URL = `/movie/${ID}`;
 const FILM_CONTAINER_SELECTOR = '.detail';
@@ -34,15 +34,20 @@ const QUOTE_TEMPLATE = data => `
     </article>
 `
 
-const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector, removeEmptyMessage = false) {
+const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl, template, containerSelector) {
     const quoteData = (await fetchResponseBody(quoteUrl)).docs;
     const characterData = (await fetchResponseBody(characterUrl)).docs;
 
     const container = document.querySelector(containerSelector);
-    if (removeEmptyMessage && !quoteData.length) {
+
+    if (!quoteData.length) {
+        /*
+        In case there are no quotes, add a message to the container and return.
+        */
+        container.insertAdjacentHTML('beforeend',
+            `<p class="items__no-items">This film has no recorded quotes</p>`);
         return;
     }
-    container.children[container.children.length - 1].remove();
 
     quoteData.forEach(item => {
             let character = characterData.find(c => c._id === item.character);
@@ -58,5 +63,5 @@ const fetchAndRenderQuotesWithCharacter = async function (quoteUrl, characterUrl
 
 document.addEventListener('DOMContentLoaded', async () => {
     await fetchAndRenderItem(FILM_URL, FILM_TEMPLATE, FILM_CONTAINER_SELECTOR);
-    await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR, true);
+    await fetchAndRenderQuotesWithCharacter(QUOTES_URL, CHARACTERS_URL, QUOTE_TEMPLATE, QUOTES_CONTAINER_SELECTOR);
 });

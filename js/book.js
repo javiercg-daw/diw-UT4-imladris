@@ -1,6 +1,6 @@
-import {fetchAndRenderItem, fetchAndRenderList} from "./service.js";
+import {fetchAndRenderItem, fetchAndRenderList, getIdOr404} from "./service.js";
 
-const ID = new URLSearchParams(window.location.search).get('id');
+const ID = getIdOr404();
 
 const BOOK_URL = `/book/${ID}`;
 const BOOK_CONTAINER_SELECTOR = '.detail';

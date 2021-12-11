@@ -13,8 +13,10 @@
 
 # Despliegue de la aplicación
 
-Desplegar como una página HTML normal (por ejemplo, abriendo el directorio de la aplicación con el plugin Live Server de
-VS Code, o copiando el contenido a un servidor Apache).
+Desplegar como una página HTML normal —por ejemplo, abriendo el directorio de la aplicación con el plugin Live Server de
+VS Code, o copiando el contenido a un servidor Apache. Para desplegar la aplicación en línea se ha utilizado GitHub
+Pages, que permite realizar el despliegue a partir del repositorio de GitHub en el que está alojado el proyecto (
+Settings -> Pages).
 
 # Cambios respecto del prototipo:
 

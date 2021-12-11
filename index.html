@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="stylesheet"
           href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script defer src="js/index.js"></script>
 
     <title>Imladris</title>
 
@@ -18,7 +19,7 @@
         del código. Si queremos hacer un cambio que afecta a varias páginas tendremos que modificar varios documentos,
         con lo cual tardaremos más, y además es posible que se produzcan inconsistencias entre los documentos. Tampoco
         se recomienda usar estilos en línea, ya que entorpece la lectura del código HTML y puede hacer que los
-        estilos a cambiar sean difíciles de localizar. Es recomendable organizar los estilos CSS en hojas de estilo
+        estilos a cambiar sean difíciles de localizar. Es preferible organizar los estilos CSS en hojas de estilo
         externas referenciadas desde el documento HTML.
         */
 
@@ -28,10 +29,7 @@
         }
     </style>
 </head>
-<body style="background-color: #b0d2bf">
-<!--
-
--->
+<body style="background-color: var(--medium-primary)">
 <div class="body-container">
     <header class="bg-green-dark">
         <div class="header__container">
@@ -67,8 +65,8 @@
             </section>
             <section class="index__section-2 bg-green-medium">
                 <p class="index__text-2 text-green-dark">Join now and read quotes from your favourite characters from
-                    <span class="text-italic">The Lord of the Rings</span>, check out data about the book and the films, and
-                    more!</p>
+                    <span class="text-italic">The Lord of the Rings</span>, check out data about the book and the films,
+                    and more!</p>
                 <div class="index__buttons">
                     <a class="btn btn-dark"
                        href="./login.html">Log in</a>
@@ -102,6 +100,5 @@
         </div>
     </footer>
 </div>
-<script src="js/index.js"></script>
 </body>
 </html>

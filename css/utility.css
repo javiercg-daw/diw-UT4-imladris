@@ -36,7 +36,7 @@
     }
 }
 
-/* Dark mode variables */
+/* Dark mode style sheets */
 :root[data-theme='dark'] {
     --dark-primary: #1b445f;
     --medium-primary: #4d7a96;

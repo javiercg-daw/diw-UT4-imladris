@@ -3,7 +3,7 @@ import {fetchAndRenderItem, fetchAndRenderList, getIdOr404} from "./service.js";
 const ID = getIdOr404();
 
 const CHARACTER_URL = `/character/${ID}`;
-const CHARACTER_CONTAINER_SELECTOR = '.detail';
+const CHARACTER_CONTAINER_SELECTOR = ".detail";
 const CHARACTER_TEMPLATE = data => `
     <section class="data bg-blue-dark text-blue-light">
         <div class="detail__image-container">
@@ -27,18 +27,18 @@ const CHARACTER_TEMPLATE = data => `
 `;
 
 const QUOTES_URL = `/character/${ID}/quote`;
-const QUOTES_CONTAINER_SELECTOR = '.items';
+const QUOTES_CONTAINER_SELECTOR = ".items";
 const QUOTES_TEMPLATE = data => `
     <article class="items__item detail__quote">
         <p class="quote-text">${data.dialog}</p>
     </article>
-`
+`;
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
     await Promise.all([
         fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR, true),
         fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR,
-            'This character has no recorded quotes')
+            "This character has no recorded quotes")
 
-    ])
+    ]);
 });

@@ -8,16 +8,12 @@
 
 # GitHub
 
-- Repositorio: https://github.com/javiercg-daw/diw-UT4-imladris
-- Repositorio alternativo: https://github.com/javiercg-daw/Proy1_ClavijoGarciaJavier_DWEC
-- GitHub Pages: https://javiercg-daw.github.io/diw-UT4-imladris/
+- Repositorio (DIW): https://github.com/javiercg-daw/diw-UT4-imladris
+- Repositorio (DWEC): https://github.com/javiercg-daw/Proy1_ClavijoGarciaJavier_DWEC
 
 # Despliegue de la aplicación
 
-Desplegar como una página HTML normal —por ejemplo, abriendo el directorio de la aplicación con el plugin Live Server de
-VS Code, o copiando el contenido a un servidor Apache. Para desplegar la aplicación en línea se ha utilizado GitHub
-Pages, que permite realizar el despliegue a partir del repositorio de GitHub en el que está alojado el proyecto (
-Settings -> Pages).
+- GitHub Pages: https://javiercg-daw.github.io/diw-UT4-imladris/
 
 # Cambios respecto del prototipo:
 

@@ -13,7 +13,8 @@
 
 # Despliegue de la aplicación
 
-- GitHub Pages: https://javiercg-daw.github.io/diw-UT4-imladris/
+- GitHub Pages (DIW): https://javiercg-daw.github.io/diw-UT4-imladris/
+- GitHub Pages (DWEC): https://javiercg-daw.github.io/Proy1_ClavijoGarciaJavier_DWEC/
 
 # Cambios respecto del prototipo:
 

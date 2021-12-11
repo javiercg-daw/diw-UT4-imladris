@@ -9,6 +9,7 @@
 # GitHub
 
 - Repositorio: https://github.com/javiercg-daw/diw-UT4-imladris
+- Repositorio alternativo: https://github.com/javiercg-daw/Proy1_ClavijoGarciaJavier_DWEC
 - GitHub Pages: https://javiercg-daw.github.io/diw-UT4-imladris/
 
 # Despliegue de la aplicación

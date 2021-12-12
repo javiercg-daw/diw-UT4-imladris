@@ -8,7 +8,7 @@ const CHARACTER_TEMPLATE = data => `
     <section class="data bg-blue-dark text-blue-light">
         <div class="detail__image-container">
             <img class="detail__image"
-                 src="${data.hasImage ? `./img/character/${data._id}.png` : "./img/character-blank.png"}"
+                 src="${data.hasImage ? `./img/character/${data._id}.jpg` : "./img/character-blank.png"}"
                  alt="${data.name}"/>
         </div>
         <div class="data-text">

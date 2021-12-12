@@ -8,7 +8,7 @@ const BOOK_TEMPLATE = data => `
     <section class="data bg-blue-dark text-blue-light">
         <div class="detail__image-container">
             <img class="detail__image"
-                 src="./img/movie-blank.jpg" alt="${data.name}"/>
+                 src="./img/book/${data._id}.png" alt="${data.name}"/>
         </div>
         <div class="data-text">
             <h2 class="data__title">${data.name}</h2>

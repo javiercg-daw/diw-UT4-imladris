@@ -2,11 +2,11 @@ import {fetchResponseBody} from "./service.js";
 
 const ITEM_TEMPLATE = (item, url) => `
     <article class="list__article">
-        <p class="list__article-title" >${item.name}</p>
-        <img class="list__image" src="./img/movie-blank.jpg" 
+        <p class="list__article-title">${item.name}</p>
+        <img class="list__image" src="./img/${url}/${item._id}.png" 
             alt="The Lord of the Rings: The Fellowship of the Ring Poster"/>
         <div class="list__image-gradient"></div>
-        <a class="list__link" href="${url}?id=${item._id}"></a>
+        <a class="list__link" href=".${url}.html?id=${item._id}"></a>
     </article>
 `;
 
@@ -32,21 +32,21 @@ const fetchAndRenderFilmsAndBooks = async function () {
     booksData.forEach(item => {
         const article = document.createElement("article");
         booksContainer.appendChild(article);
-        article.outerHTML = ITEM_TEMPLATE(item, "./book.html");
+        article.outerHTML = ITEM_TEMPLATE(item, "/book");
     });
 
     const lotrContainer = document.querySelector("#lotr-films");
     lotrFilms.forEach(item => {
         const article = document.createElement("article");
         lotrContainer.appendChild(article);
-        article.outerHTML = ITEM_TEMPLATE(item, "./film.html");
+        article.outerHTML = ITEM_TEMPLATE(item, "/film");
     });
 
     const hobbitContainer = document.querySelector("#hobbit-films");
     hobbitFilms.forEach(item => {
         const article = document.createElement("article");
         hobbitContainer.appendChild(article);
-        article.outerHTML = ITEM_TEMPLATE(item, "./film.html");
+        article.outerHTML = ITEM_TEMPLATE(item, "/film");
     });
 };
 

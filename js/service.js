@@ -1,4 +1,5 @@
 import {API_URI, TOKEN} from "./env.js";
+import {CHARACTERS_WITH_IMAGE} from "./characters-with-image.js";
 
 /*
  Fetches API response body. Used in all API calls.
@@ -29,40 +30,11 @@ export const fetchResponseBody = async url => {
 };
 
 /*
- Fetches image URL from the wiki URL provided by the API, then sets it as the HTML src attribute for the element
- specified by the selector. (The API does not provide image URLs or data for its resources.)
- */
-const fetchImageURLFromWiki = async function (wikiURL, imgElementSelector = ".detail__image") {
-    try {
-        // The request is sent through a CORS proxy to add the Access-Control-Allow-Origin header to the response
-        const wikiResponse = await fetch(new Request(
-                `https://guarded-sands-92210.herokuapp.com/${wikiURL}`),
-            {
-                method: "GET",
-                mode: "cors",
-                headers: new Headers({
-                    "Accept": "text/html"
-                }),
-                cache: "default"
-            }
-        );
-        const wikiDocument = new DOMParser().parseFromString(await wikiResponse.text(), "text/html");
-        const image = wikiDocument.querySelector(".pi-image-thumbnail");
-        if (image) {
-            // Before being set as the element's src, the image URL is split to remove unnecessary parts
-            document.querySelector(imgElementSelector).src = image.src.split("/revision/")[0];
-        }
-    } catch (error) {
-        console.error(error);
-    }
-};
-
-/*
  Fetches a single resource from an URL, then inserts the HTML template with the resource's data in the specified
- container. Used in character, film and book detail pages. Provides an option to fetch the resource's image URL from the
- wiki (currently only used in the character detail page).
+ container. Used in character, film and book detail pages. If the isCharacter argument is true, it checks if the ID is
+ included in the array of characters with images, in which case it sets its hasImage property to true.
  */
-export const fetchAndRenderItem = async function (url, template, containerSelector, fetchImage = false) {
+export const fetchAndRenderItem = async function (url, template, containerSelector, isCharacter = false) {
     const data = (await fetchResponseBody(url)).docs[0];
     const container = document.querySelector(containerSelector);
 
@@ -73,18 +45,20 @@ export const fetchAndRenderItem = async function (url, template, containerSelect
         }
     });
 
+    if (isCharacter && CHARACTERS_WITH_IMAGE.includes(data._id)) {
+        data.hasImage = true;
+    }
+
     document.title = `${data.name} - Imladris`;
     container.insertAdjacentHTML("afterbegin", template(data));
-
-    if (fetchImage && data.wikiUrl) {
-        await fetchImageURLFromWiki(data.wikiUrl);
-    }
 };
 
 /*
- Fetches an array of resources, then inserts each one of them in the specified container based on the template.
+ Fetches an array of resources, then inserts each one of them in the specified container based on the template. If the
+ isCharacterList argument is set to true, it adds a hasImage property to each character that has an image.
  */
-export const fetchAndRenderList = async function (url, template, containerSelector, emptyMessage) {
+export const fetchAndRenderList = async function (url, template, containerSelector,
+                                                  emptyMessage, isCharacterList = false) {
     const data = (await fetchResponseBody(url)).docs;
     const container = document.querySelector(containerSelector);
 
@@ -93,6 +67,12 @@ export const fetchAndRenderList = async function (url, template, containerSelect
     if (emptyMessage !== null && !data.length) {
         container.insertAdjacentHTML("beforeend", `<p class="items__no-items">${emptyMessage}</p>`);
         return;
+    }
+
+    if (isCharacterList) {
+        CHARACTERS_WITH_IMAGE.forEach(id =>
+            data.find(c => c._id === id).hasImage = true
+        );
     }
 
     data.forEach(item =>

@@ -8,7 +8,8 @@ const CHARACTER_TEMPLATE = data => `
     <section class="data bg-blue-dark text-blue-light">
         <div class="detail__image-container">
             <img class="detail__image"
-                 src="./img/character-blank.png" alt="${data.name}"/>
+                 src="${data.hasImage ? `./img/character/${data._id}.png` : "./img/character-blank.png"}"
+                 alt="${data.name}"/>
         </div>
         <div class="data-text">
             <h2 class="data__title">${data.name}</h2>
@@ -22,6 +23,9 @@ const CHARACTER_TEMPLATE = data => `
                 <li class="data__list-element"><span>Hair:</span> ${data.hair}</li>
                 <li class="data__list-element"><span>Height:</span> ${data.height}</li>
             </ul>
+            ${data.wikiUrl ? `
+            <a class="text-underline text-m" href=${data.wikiUrl}>Wiki Page</a>
+            ` : ""}
         </div>
     </section>
 `;
@@ -39,6 +43,5 @@ document.addEventListener("DOMContentLoaded", async () => {
         fetchAndRenderItem(CHARACTER_URL, CHARACTER_TEMPLATE, CHARACTER_CONTAINER_SELECTOR, true),
         fetchAndRenderList(QUOTES_URL, QUOTES_TEMPLATE, QUOTES_CONTAINER_SELECTOR,
             "This character has no recorded quotes")
-
     ]);
 });
